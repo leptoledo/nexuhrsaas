@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexuHR | A Plataforma Tudo-em-Um de RH Inteligente e DP</title>
+  <meta name="description" content="Automatize ponto eletrônico, férias, recrutamento, documentos e gestão de pessoas com IA. A plataforma All-in-One de RH inspirada nas melhores práticas globais.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            nexu: {
+              coral: '#FF385C',
+              coralDark: '#E0264A',
+              coralLight: '#FFF1F3',
+              indigo: '#4F46E5',
+              indigoLight: '#EEF2FF',
+              dark: '#0F172A',
+              muted: '#64748B',
+              surface: '#FFFFFF',
+              bgLight: '#F8FAFC',
+              border: '#E2E8F0',
+              emerald: '#10B981',
+              amber: '#F59E0B'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Plus Jakarta Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-nexu-bgLight text-nexu-dark font-sans antialiased selection:bg-nexu-coral selection:text-white">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-nexu-dark via-slate-800 to-nexu-dark text-white py-2 px-4 text-xs md:text-sm font-medium text-center flex items-center justify-center gap-2 border-b border-slate-700">
+    <span class="bg-nexu-coral text-white text-[11px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Novo</span>
+    <span>Conheça o <strong>NexuHR AI Copilot</strong>: economize até 70% do tempo em rotinas de DP.</span>
+    <a href="#modulos" class="underline hover:text-nexu-coralLight transition-colors font-semibold hidden sm:inline">Ver como funciona &rarr;</a>
+  </div>
+
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-nexu-border transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-2.5 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-nexu-coral to-rose-400 flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform">
+          <i data-lucide="layers" class="w-6 h-6"></i>
+        </div>
+        <span class="font-heading font-extrabold text-2xl tracking-tight text-nexu-dark">Nexu<span class="text-nexu-coral">HR</span></span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-nexu-muted">
+        <a href="#modulos" class="hover:text-nexu-coral transition-colors">Módulos</a>
+        <a href="#beneficios" class="hover:text-nexu-coral transition-colors">Benefícios</a>
+        <a href="#calculadora" class="hover:text-nexu-coral transition-colors">Calculadora ROI</a>
+        <a href="#depoimentos" class="hover:text-nexu-coral transition-colors">Clientes</a>
+        <a href="#precos" class="hover:text-nexu-coral transition-colors">Preços</a>
+        <a href="#faq" class="hover:text-nexu-coral transition-colors">FAQ</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-3">
+        <a href="../app/index.html" class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-sm font-semibold text-nexu-dark hover:bg-slate-100 transition-colors border border-slate-200">
+          <i data-lucide="layout-dashboard" class="w-4 h-4 text-nexu-indigo"></i>
+          Acessar App Demo
+        </a>
+        <button onclick="openModal()" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-nexu-coral hover:bg-nexu-coralDark transition-all shadow-md hover:shadow-lg hover:shadow-nexu-coral/30">
+          <span>Testar 14 Dias Grátis</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+    <!-- Background Glows -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-nexu-coral/10 to-nexu-indigo/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-nexu-coralLight border border-nexu-coral/20 text-nexu-coral text-xs md:text-sm font-semibold mb-6 animate-pulse">
+        <i data-lucide="sparkles" class="w-4 h-4"></i>
+        <span>A Plataforma de RH All-in-One nº 1 para PMEs Modernas</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-nexu-dark tracking-tight max-w-4xl mx-auto leading-[1.15]">
+        RH sem atritos, <br class="hidden sm:inline">
+        <span class="bg-gradient-to-r from-nexu-coral via-rose-500 to-nexu-indigo bg-clip-text text-transparent">pessoas em primeiro lugar.</span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="mt-6 text-lg sm:text-xl text-nexu-muted max-w-2xl mx-auto leading-relaxed">
+        Centralize ponto digital, férias, admissões, documentos e recrutamento em uma única plataforma intuitiva com IA que economiza até <strong>70% das tarefas manuais de DP</strong>.
+      </p>
+
+      <!-- CTA Box -->
+      <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
+        <div class="w-full relative">
+          <input type="email" id="heroEmail" placeholder="Seu e-mail corporativo..." class="w-full px-4 py-3.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-nexu-coral text-sm shadow-sm">
+        </div>
+        <button onclick="handleHeroSubmit()" class="w-full sm:w-auto shrink-0 px-6 py-3.5 rounded-xl bg-nexu-coral hover:bg-nexu-coralDark text-white font-semibold text-sm shadow-lg hover:shadow-nexu-coral/30 transition-all flex items-center justify-center gap-2">
+          <span>Começar Agora</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <!-- Trust Badges -->
+      <div class="mt-6 flex flex-wrap items-center justify-center gap-6 text-xs text-nexu-muted font-medium">
+        <div class="flex items-center gap-1.5">
+          <i data-lucide="check-circle-2" class="w-4 h-4 text-nexu-emerald"></i>
+          <span>14 dias grátis sem cartão</span>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <i data-lucide="shield-check" class="w-4 h-4 text-nexu-indigo"></i>
+          <span>100% Conforme LGPD</span>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <i data-lucide="zap" class="w-4 h-4 text-nexu-amber"></i>
+          <span>Setup em 15 minutos</span>
+        </div>
+      </div>
+
+      <!-- Interactive App Hero Preview Mockup -->
+      <div class="mt-14 relative max-w-5xl mx-auto">
+        <div class="rounded-2xl border border-slate-200/80 bg-white shadow-2xl p-2 sm:p-4 transition-transform duration-500 hover:scale-[1.01]">
+          <!-- Window Header Bar -->
+          <div class="flex items-center justify-between px-3 py-2 border-b border-slate-100 mb-3 bg-slate-50 rounded-xl">
+            <div class="flex items-center gap-1.5">
+              <span class="w-3 h-3 rounded-full bg-red-400"></span>
+              <span class="w-3 h-3 rounded-full bg-amber-400"></span>
+              <span class="w-3 h-3 rounded-full bg-emerald-400"></span>
+            </div>
+            <div class="text-xs text-slate-400 font-mono bg-white px-3 py-0.5 rounded-md border border-slate-200 flex items-center gap-1">
+              <i data-lucide="lock" class="w-3 h-3 text-slate-400"></i>
+              app.nexuhr.com/dashboard
+            </div>
+            <div class="flex items-center gap-2">
+              <a href="../app/index.html" class="text-xs bg-nexu-coral text-white font-semibold px-2.5 py-1 rounded-lg hover:bg-nexu-coralDark transition-colors flex items-center gap-1">
+                <span>Abrir App Completo</span>
+                <i data-lucide="external-link" class="w-3 h-3"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Mockup Grid Content -->
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 text-left p-2">
+            <!-- Stat Card 1 -->
+            <div class="bg-gradient-to-br from-slate-900 to-slate-800 text-white p-4 rounded-xl shadow-sm">
+              <div class="flex items-center justify-between text-xs text-slate-400">
+                <span>Presença em Tempo Real</span>
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+              </div>
+              <div class="mt-2 text-2xl font-bold font-heading">48 / 52</div>
+              <div class="mt-1 text-xs text-emerald-400 flex items-center gap-1">
+                <i data-lucide="trending-up" class="w-3 h-3"></i>
+                <span>92.3% assiduidade hoje</span>
+              </div>
+              <div class="mt-3 pt-3 border-t border-slate-700 flex items-center justify-between text-xs">
+                <span class="text-slate-400">4 em Férias/Folga</span>
+                <span class="text-nexu-coral font-medium">Ver detalhes &rarr;</span>
+              </div>
+            </div>
+
+            <!-- Stat Card 2 -->
+            <div class="bg-slate-50 border border-slate-200 p-4 rounded-xl">
+              <div class="flex items-center justify-between text-xs text-nexu-muted">
+                <span>Férias & Ausências Pendentes</span>
+                <i data-lucide="calendar" class="w-4 h-4 text-nexu-coral"></i>
+              </div>
+              <div class="mt-2 text-2xl font-bold font-heading text-nexu-dark">3 Solicitações</div>
+              <div class="mt-1 text-xs text-nexu-muted">Mariana, Rafael e Beatriz</div>
+              <div class="mt-3 flex items-center gap-2">
+                <span class="text-xs bg-amber-100 text-amber-800 font-semibold px-2 py-0.5 rounded-full">Aguardando RH</span>
+                <span class="text-xs text-nexu-muted">Tempo médio: 2h</span>
+              </div>
+            </div>
+
+            <!-- Stat Card 3 (AI Assistant) -->
+            <div class="bg-gradient-to-br from-indigo-50 to-purple-50 border border-indigo-100 p-4 rounded-xl">
+              <div class="flex items-center justify-between text-xs text-nexu-indigo font-semibold">
+                <span class="flex items-center gap-1.5">
+                  <i data-lucide="bot" class="w-4 h-4 text-nexu-indigo"></i>
+                  Nexu AI Copilot
+                </span>
+                <span class="text-[10px] bg-nexu-indigo text-white px-1.5 py-0.5 rounded font-bold">ONLINE</span>
+              </div>
+              <p class="mt-2 text-xs text-slate-700 leading-relaxed italic">
+                "Identifiquei que 5 colaboradores completam 1 ano de empresa este mês. Deseja agendar a revisão de feedback?"
+              </p>
+              <div class="mt-3 flex items-center gap-2">
+                <button class="text-xs bg-nexu-indigo text-white px-2.5 py-1 rounded-lg font-medium hover:bg-indigo-700 transition-colors">Agendar com 1 clique</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating Floating Feature Badges -->
+        <div class="absolute -bottom-6 -left-4 hidden md:flex items-center gap-3 bg-white p-3 rounded-2xl shadow-xl border border-slate-100">
+          <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center">
+            <i data-lucide="clock" class="w-5 h-5"></i>
+          </div>
+          <div class="text-left text-xs">
+            <div class="font-bold text-nexu-dark">Ponto Registrado via GPS</div>
+            <div class="text-nexu-muted">08:59 - Carlos Silva (Presencial)</div>
+          </div>
+        </div>
+
+        <div class="absolute -top-6 -right-4 hidden md:flex items-center gap-3 bg-white p-3 rounded-2xl shadow-xl border border-slate-100">
+          <div class="w-10 h-10 rounded-xl bg-rose-100 text-nexu-coral flex items-center justify-center">
+            <i data-lucide="file-signature" class="w-5 h-5"></i>
+          </div>
+          <div class="text-left text-xs">
+            <div class="font-bold text-nexu-dark">Contrato Assinado Digitalmente</div>
+            <div class="text-nexu-muted">Validade jurídica com 1 clique</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof Logos Section -->
+  <section class="py-10 border-y border-slate-200 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-xs font-semibold uppercase tracking-wider text-slate-400">
+        Empresas inovadoras que confiam na tecnologia NexuHR para gerir suas equipes
+      </p>
+      <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 items-center justify-center opacity-70 grayscale hover:grayscale-0 transition-all">
+        <div class="flex items-center justify-center gap-1.5 font-heading font-bold text-slate-800 text-lg">
+          <i data-lucide="triangle" class="w-5 h-5 text-nexu-coral"></i> VORTEX Tech
+        </div>
+        <div class="flex items-center justify-center gap-1.5 font-heading font-bold text-slate-800 text-lg">
+          <i data-lucide="hexagon" class="w-5 h-5 text-nexu-indigo"></i> NOVA Health
+        </div>
+        <div class="flex items-center justify-center gap-1.5 font-heading font-bold text-slate-800 text-lg">
+          <i data-lucide="circle" class="w-5 h-5 text-emerald-500"></i> LUNAR Logistics
+        </div>
+        <div class="flex items-center justify-center gap-1.5 font-heading font-bold text-slate-800 text-lg">
+          <i data-lucide="box" class="w-5 h-5 text-amber-500"></i> PRIME Retail
+        </div>
+        <div class="flex items-center justify-center gap-1.5 font-heading font-bold text-slate-800 text-lg">
+          <i data-lucide="cpu" class="w-5 h-5 text-purple-600"></i> QUANTUM SaaS
+        </div>
+        <div class="flex items-center justify-center gap-1.5 font-heading font-bold text-slate-800 text-lg">
+          <i data-lucide="globe" class="w-5 h-5 text-blue-500"></i> ATLAS Global
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Modules Section (Tabs) -->
+  <section id="modulos" class="py-20 md:py-32 bg-nexu-bgLight">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto">
+        <span class="text-xs font-bold uppercase tracking-widest text-nexu-coral bg-nexu-coralLight px-3 py-1 rounded-full">Tudo em Um Só Lugar</span>
+        <h2 class="mt-4 font-heading font-extrabold text-3xl sm:text-4xl text-nexu-dark tracking-tight">
+          Todos os módulos que o seu RH precisa para operar com excelência
+        </h2>
+        <p class="mt-4 text-nexu-muted text-base sm:text-lg">
+          Diga adeus a ferramentas fragmentadas e planilhas desconectadas. O NexuHR integra todas as fases da jornada do colaborador.
+        </p>
+      </div>
+
+      <!-- Module Tabs Buttons -->
+      <div class="mt-12 flex flex-wrap items-center justify-center gap-2 sm:gap-3" id="tabButtons">
+        <button onclick="switchTab('ponto')" data-tab="ponto" class="tab-btn active px-4 py-2.5 rounded-xl font-semibold text-sm transition-all flex items-center gap-2 border bg-white shadow-sm border-slate-200 text-nexu-dark hover:border-nexu-coral">
+          <i data-lucide="clock" class="w-4 h-4 text-nexu-coral"></i>
+          <span>Ponto & Horas</span>
+        </button>
+        <button onclick="switchTab('ferias')" data-tab="ferias" class="tab-btn px-4 py-2.5 rounded-xl font-semibold text-sm transition-all flex items-center gap-2 border bg-white shadow-sm border-slate-200 text-nexu-dark hover:border-nexu-coral">
+          <i data-lucide="palmtree" class="w-4 h-4 text-amber-500"></i>
+          <span>Férias & Ausências</span>
+        </button>
+        <button onclick="switchTab('pessoas')" data-tab="pessoas" class="tab-btn px-4 py-2.5 rounded-xl font-semibold text-sm transition-all flex items-center gap-2 border bg-white shadow-sm border-slate-200 text-nexu-dark hover:border-nexu-coral">
+          <i data-lucide="users" class="w-4 h-4 text-nexu-indigo"></i>
+          <span>Diretório & Pessoas</span>
+        </button>
+        <button onclick="switchTab('recrutamento')" data-tab="recrutamento" class="tab-btn px-4 py-2.5 rounded-xl font-semibold text-sm transition-all flex items-center gap-2 border bg-white shadow-sm border-slate-200 text-nexu-dark hover:border-nexu-coral">
+          <i data-lucide="briefcase" class="w-4 h-4 text-emerald-500"></i>
+          <span>Recrutamento (ATS)</span>
+        </button>
+        <button onclick="switchTab('documentos')" data-tab="documentos" class="tab-btn px-4 py-2.5 rounded-xl font-semibold text-sm transition-all flex items-center gap-2 border bg-white shadow-sm border-slate-200 text-nexu-dark hover:border-nexu-coral">
+          <i data-lucide="file-check" class="w-4 h-4 text-purple-500"></i>
+          <span>Documentos & Assinatura</span>
+        </button>
+        <button onclick="switchTab('ia')" data-tab="ia" class="tab-btn px-4 py-2.5 rounded-xl font-semibold text-sm transition-all flex items-center gap-2 border bg-white shadow-sm border-slate-200 text-nexu-dark hover:border-nexu-coral">
+          <i data-lucide="bot" class="w-4 h-4 text-rose-500"></i>
+          <span>Nexu AI Copilot</span>
+        </button>
+      </div>
+
+      <!-- Tab Content Panels -->
+      <div class="mt-8 bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden p-6 sm:p-10">
+        
+        <!-- Tab 1: Ponto -->
+        <div id="tab-ponto" class="tab-content grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-nexu-coralLight text-nexu-coral flex items-center justify-center mb-6">
+              <i data-lucide="clock" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-heading font-bold text-2xl sm:text-3xl text-nexu-dark">
+              Controle de Ponto Digital com GPS e Espelho Automático
+            </h3>
+            <p class="mt-4 text-nexu-muted leading-relaxed">
+              Permita que colaboradores registrem o ponto via web ou aplicativo móvel com cerca virtual (geolocalização). O sistema calcula horas trabalhadas, horas extras e banco de horas automaticamente.
+            </p>
+            <ul class="mt-6 space-y-3 text-sm text-slate-700">
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-5 h-5 text-nexu-emerald"></i>
+                <span>Compatível com as normas da Portaria 671 do MTE</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-5 h-5 text-nexu-emerald"></i>
+                <span>Reconhecimento facial opcional e registro geolocalizado</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-5 h-5 text-nexu-emerald"></i>
+                <span>Exportação instantânea para o sistema de folha de pagamento</span>
+              </li>
+            </ul>
+            <div class="mt-8">
+              <a href="../app/index.html#ponto" class="inline-flex items-center gap-2 text-sm font-bold text-nexu-coral hover:text-nexu-coralDark">
+                <span>Experimentar no App de Teste</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+          <div class="bg-slate-900 p-6 rounded-2xl text-white shadow-inner font-mono text-xs">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+              <span class="text-slate-400">Espelho de Ponto - Agosto/2026</span>
+              <span class="text-emerald-400 font-bold">100% Regularizado</span>
+            </div>
+            <div class="mt-4 space-y-3 font-sans">
+              <div class="flex items-center justify-between bg-slate-800/80 p-3 rounded-lg">
+                <div>
+                  <div class="font-semibold text-white">Segunda-feira, 18 Ago</div>
+                  <div class="text-xs text-slate-400">Entrada: 09:00 • Almoço: 12:00-13:00 • Saída: 18:00</div>
+                </div>
+                <span class="bg-emerald-500/20 text-emerald-400 px-2 py-1 rounded text-[11px] font-bold">8h 00m</span>
+              </div>
+              <div class="flex items-center justify-between bg-slate-800/80 p-3 rounded-lg">
+                <div>
+                  <div class="font-semibold text-white">Terça-feira, 19 Ago</div>
+                  <div class="text-xs text-slate-400">Entrada: 08:45 • Almoço: 12:00-13:00 • Saída: 18:45</div>
+                </div>
+                <span class="bg-nexu-coral/20 text-nexu-coral px-2 py-1 rounded text-[11px] font-bold">+1h Extra</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Férias -->
+        <div id="tab-ferias" class="tab-content hidden grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center mb-6">
+              <i data-lucide="palmtree" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-heading font-bold text-2xl sm:text-3xl text-nexu-dark">
+              Gestão de Férias e Ausências Sem Fricção
+            </h3>
+            <p class="mt-4 text-nexu-muted leading-relaxed">
+              O colaborador visualiza seu saldo de dias em tempo real e solicita suas férias direto pelo celular. O gestor recebe a notificação e aprova ou recusa com 1 clique, com visão de sobreposição de calendário da equipe.
+            </p>
+            <ul class="mt-6 space-y-3 text-sm text-slate-700">
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-5 h-5 text-nexu-emerald"></i>
+                <span>Cálculo automático de períodos aquisitivos e limites legais</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-5 h-5 text-nexu-emerald"></i>
+                <span>Calendário visual para evitar dois líderes de folga juntos</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-5 h-5 text-nexu-emerald"></i>
+                <span>Upload de atestados médicos com validação rápida pelo DP</span>
+              </li>
+            </ul>
+            <div class="mt-8">
+              <a href="../app/index.html#ferias" class="inline-flex items-center gap-2 text-sm font-bold text-nexu-coral hover:text-nexu-coralDark">
+                <span>Testar Aprovação de Férias no App</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+          <div class="bg-amber-50 border border-amber-200 p-6 rounded-2xl">
+            <div class="flex items-center justify-between mb-4">
+              <div class="font-bold text-slate-800 text-sm">Solicitação Recente de Férias</div>
+              <span class="text-xs bg-amber-200 text-amber-900 font-bold px-2 py-0.5 rounded-full">Pendente</span>
+            </div>
+            <div class="bg-white p-4 rounded-xl border border-amber-100 shadow-sm">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-600">MS</div>
+                <div>
+                  <div class="font-bold text-sm text-slate-800">Mariana Santos</div>
+                  <div class="text-xs text-slate-500">Design Lead • Saldo disponível: 22 dias</div>
+                </div>
+              </div>
+              <div class="mt-3 text-xs bg-slate-50 p-2.5 rounded-lg text-slate-700">
+                <strong>Período:</strong> 15 a 25 de Setembro (10 dias úteis)
+              </div>
+              <div class="mt-4 flex gap-2">
+                <button class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2 rounded-lg transition-colors">Aprovar Solicitação</button>
+                <button class="px-3 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold py-2 rounded-lg transition-colors">Recusar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Pessoas & Diretório -->
+        <div id="tab-pessoas" class="tab-content hidden grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-indigo-100 text-nexu-indigo flex items-center justify-center mb-6">
+              <i data-lucide="users" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-heading font-bold text-2xl sm:text-3xl text-nexu-dark">
+              Diretório Centralizado & Organograma Inteligente
+            </h3>
+            <p class="mt-4 text-nexu-muted leading-relaxed">
+              Mantenha todos os dados cadastrais, cargos, salários, históricos de promoção e contatos de emergência em um perfil unificado para cada colaborador, com permissões granulares de acesso.
+            </p>
+            <ul class="mt-6 space-y-3 text-sm text-slate-700">
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-5 h-5 text-nexu-emerald"></i>
+                <span>Organograma visual interativo e hierarquia clara de equipes</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-5 h-5 text-nexu-emerald"></i>
+                <span>Histórico completo de promoções, alterações de cargo e feedbacks</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-5 h-5 text-nexu-emerald"></i>
+                <span>Portal do colaborador para autoatualização de endereço e dados bancários</span>
+              </li>
+            </ul>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl">
+            <div class="text-xs font-bold text-slate-500 uppercase mb-3">Colaboradores em Destaque</div>
+            <div class="space-y-3">
+              <div class="bg-white p-3 rounded-xl border border-slate-100 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-full bg-nexu-coral text-white text-xs font-bold flex items-center justify-center">LG</div>
+                  <div>
+                    <div class="text-xs font-bold text-slate-800">Lucas Gomes</div>
+                    <div class="text-[11px] text-slate-500">Engenheiro de Software • Tech</div>
+                  </div>
+                </div>
+                <span class="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full">Ativo</span>
+              </div>
+              <div class="bg-white p-3 rounded-xl border border-slate-100 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-full bg-nexu-indigo text-white text-xs font-bold flex items-center justify-center">AF</div>
+                  <div>
+                    <div class="text-xs font-bold text-slate-800">Ana Ferreira</div>
+                    <div class="text-[11px] text-slate-500">Product Manager • Produto</div>
+                  </div>
+                </div>
+                <span class="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full">Ativo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 4: Recrutamento ATS -->
+        <div id="tab-recrutamento" class="tab-content hidden grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center mb-6">
+              <i data-lucide="briefcase" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-heading font-bold text-2xl sm:text-3xl text-nexu-dark">
+              Recrutamento Ágil & Pipeline de Candidatos (ATS)
+            </h3>
+            <p class="mt-4 text-nexu-muted leading-relaxed">
+              Publique vagas e organize os candidatos em um quadro Kanban intuitivo. Avalie currículos com triagem assistida por IA, agende entrevistas e envie cartas-oferta sem sair do NexuHR.
+            </p>
+            <ul class="mt-6 space-y-3 text-sm text-slate-700">
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-5 h-5 text-nexu-emerald"></i>
+                <span>Página de carreiras personalizada pronta para publicar</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-5 h-5 text-nexu-emerald"></i>
+                <span>Score de compatibilidade do candidato com o cargo</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-5 h-5 text-nexu-emerald"></i>
+                <span>Onboarding com 1 clique transformando o candidato em colaborador</span>
+              </li>
+            </ul>
+          </div>
+          <div class="bg-slate-100 p-4 rounded-2xl border border-slate-200">
+            <div class="grid grid-cols-3 gap-2 text-xs">
+              <div class="bg-white p-2.5 rounded-lg shadow-sm border border-slate-200">
+                <div class="font-bold text-slate-700 pb-1 border-b border-slate-100 mb-2">Triagem (4)</div>
+                <div class="bg-slate-50 p-2 rounded border border-slate-200 text-[11px] mb-1.5">
+                  <div class="font-semibold">Bruno Lima</div>
+                  <div class="text-slate-500 text-[10px]">React / Node</div>
+                </div>
+              </div>
+              <div class="bg-white p-2.5 rounded-lg shadow-sm border border-slate-200">
+                <div class="font-bold text-slate-700 pb-1 border-b border-slate-100 mb-2">Entrevista (2)</div>
+                <div class="bg-indigo-50 p-2 rounded border border-indigo-200 text-[11px] mb-1.5">
+                  <div class="font-semibold text-nexu-indigo">Camila Rocha</div>
+                  <div class="text-slate-500 text-[10px]">Score 94% Fit</div>
+                </div>
+              </div>
+              <div class="bg-white p-2.5 rounded-lg shadow-sm border border-slate-200">
+                <div class="font-bold text-slate-700 pb-1 border-b border-slate-100 mb-2">Proposta (1)</div>
+                <div class="bg-emerald-50 p-2 rounded border border-emerald-200 text-[11px]">
+                  <div class="font-semibold text-emerald-800">Diego Costa</div>
+                  <div class="text-slate-500 text-[10px]">Oferta enviada</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 5: Documentos -->
+        <div id="tab-documentos" class="tab-content hidden grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center mb-6">
+              <i data-lucide="file-check" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-heading font-bold text-2xl sm:text-3xl text-nexu-dark">
+              Assinatura Eletrônica & Gestão de Documentos
+            </h3>
+            <p class="mt-4 text-nexu-muted leading-relaxed">
+              Elimine o papel e as pastas físicas. Envie holerites em lote com notificação automática e colete assinaturas de contratos e termos de confidencialidade com validade jurídica garantida.
+            </p>
+            <ul class="mt-6 space-y-3 text-sm text-slate-700">
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-5 h-5 text-nexu-emerald"></i>
+                <span>Disparo de holerites para toda a empresa em 2 cliques</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-5 h-5 text-nexu-emerald"></i>
+                <span>Trilha de auditoria com IP, data e carimbo de tempo</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-5 h-5 text-nexu-emerald"></i>
+                <span>Armazenamento criptografado em nuvem de alta segurança</span>
+              </li>
+            </ul>
+          </div>
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 text-xs">
+            <div class="font-bold text-slate-800 mb-3 flex items-center justify-between">
+              <span>Documentos Recentes</span>
+              <span class="text-nexu-coral font-semibold">Novo Envio +</span>
+            </div>
+            <div class="space-y-2">
+              <div class="bg-white p-3 rounded-xl border border-slate-200 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <i data-lucide="file-text" class="w-4 h-4 text-purple-600"></i>
+                  <span class="font-medium text-slate-700">Contrato_Trabalho_Lucas.pdf</span>
+                </div>
+                <span class="bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-bold text-[10px]">Assinado</span>
+              </div>
+              <div class="bg-white p-3 rounded-xl border border-slate-200 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <i data-lucide="file-text" class="w-4 h-4 text-purple-600"></i>
+                  <span class="font-medium text-slate-700">Termo_Equipamento_Ana.pdf</span>
+                </div>
+                <span class="bg-amber-100 text-amber-800 px-2 py-0.5 rounded font-bold text-[10px]">Pendente</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 6: Nexu AI -->
+        <div id="tab-ia" class="tab-content hidden grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-rose-100 text-nexu-coral flex items-center justify-center mb-6">
+              <i data-lucide="bot" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-heading font-bold text-2xl sm:text-3xl text-nexu-dark">
+              Nexu AI Copilot: Inteligência Artificial Dedicada ao RH
+            </h3>
+            <p class="mt-4 text-nexu-muted leading-relaxed">
+              O primeiro assistente de IA treinado em rotinas de departamento pessoal, legislação trabalhista e inteligência de retenção. Faça perguntas em linguagem natural e receba respostas precisas em segundos.
+            </p>
+            <ul class="mt-6 space-y-3 text-sm text-slate-700">
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-5 h-5 text-nexu-emerald"></i>
+                <span>Geração instantânea de descrições de cargos e roteiros de entrevista</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-5 h-5 text-nexu-emerald"></i>
+                <span>Análise preditiva de risco de turnover e absenteísmo</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-5 h-5 text-nexu-emerald"></i>
+                <span>Esclarecimento de dúvidas sobre CLT e acordos coletivos</span>
+              </li>
+            </ul>
+          </div>
+          <div class="bg-gradient-to-br from-slate-900 to-indigo-950 p-6 rounded-2xl text-white shadow-xl">
+            <div class="flex items-center gap-2 mb-4 text-xs font-semibold text-nexu-coral">
+              <i data-lucide="sparkles" class="w-4 h-4"></i>
+              <span>Demonstração ao Vivo do Chat AI</span>
+            </div>
+            <div class="space-y-3 text-xs">
+              <div class="bg-slate-800/90 p-3 rounded-xl text-slate-200 border border-slate-700">
+                <strong>Você:</strong> "Quais funcionários têm férias vencendo nos próximos 45 dias?"
+              </div>
+              <div class="bg-nexu-indigo/30 p-3 rounded-xl text-indigo-100 border border-indigo-500/30">
+                <strong>Nexu AI:</strong> "Localizei 2 colaboradores: <em>Mariana Silva</em> (vence em 28 dias) e <em>Felipe Santos</em> (vence em 41 dias). Deseja enviar um lembrete automático para agendarem as férias?"
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem vs Solution Comparison Section -->
+  <section id="beneficios" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto">
+        <span class="text-xs font-bold uppercase tracking-widest text-nexu-indigo bg-nexu-indigoLight px-3 py-1 rounded-full">Transformação Real</span>
+        <h2 class="mt-4 font-heading font-extrabold text-3xl sm:text-4xl text-nexu-dark tracking-tight">
+          Por que líderes estão trocando ferramentas legadas pelo NexuHR?
+        </h2>
+      </div>
+
+      <div class="mt-14 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- The Old Way (Pain) -->
+        <div class="bg-red-50/50 border border-red-200 rounded-3xl p-8">
+          <div class="flex items-center gap-3 text-red-600 font-heading font-bold text-xl mb-6">
+            <div class="w-10 h-10 rounded-xl bg-red-100 flex items-center justify-center">
+              <i data-lucide="x-circle" class="w-6 h-6"></i>
+            </div>
+            <span>O Jeito Antigo (Caos & Planilhas)</span>
+          </div>
+          <ul class="space-y-4 text-sm text-slate-700">
+            <li class="flex items-start gap-3">
+              <i data-lucide="x" class="w-5 h-5 text-red-500 shrink-0 mt-0.5"></i>
+              <span>Dezenas de planilhas desatualizadas com versões conflitantes.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="x" class="w-5 h-5 text-red-500 shrink-0 mt-0.5"></i>
+              <span>Cobrança exaustiva de espelho de ponto no final de cada mês.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="x" class="w-5 h-5 text-red-500 shrink-0 mt-0.5"></i>
+              <span>Aprovações perdidas em threads infinitas de e-mail e WhatsApp.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="x" class="w-5 h-5 text-red-500 shrink-0 mt-0.5"></i>
+              <span>Risco constante de passivos trabalhistas e multas de fiscalização.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="x" class="w-5 h-5 text-red-500 shrink-0 mt-0.5"></i>
+              <span>RH sobrecarregado sem tempo para desenvolvimento de lideranças.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- The NexuHR Way (Gain) -->
+        <div class="bg-emerald-50/50 border border-emerald-200 rounded-3xl p-8 shadow-lg">
+          <div class="flex items-center gap-3 text-emerald-700 font-heading font-bold text-xl mb-6">
+            <div class="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center">
+              <i data-lucide="check-circle" class="w-6 h-6 text-emerald-600"></i>
+            </div>
+            <span>Com o NexuHR (Automação & Clareza)</span>
+          </div>
+          <ul class="space-y-4 text-sm text-slate-700">
+            <li class="flex items-start gap-3">
+              <i data-lucide="check" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i>
+              <span>Base única de dados com atualização em tempo real para toda a empresa.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="check" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i>
+              <span>Espelho de ponto fechado e calculado em segundos com exportação fácil.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="check" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i>
+              <span>Aprovações instantâneas de férias e despesas com 1 toque no app.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="check" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i>
+              <span>Segurança jurídica com assinaturas digitais válidas e histórico blindado.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="check" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i>
+              <span>RH estratégico, focado em cultura, engajamento e retenção de talentos.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive ROI Calculator Section -->
+  <section id="calculadora" class="py-20 md:py-28 bg-gradient-to-b from-slate-900 to-slate-950 text-white relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto">
+        <span class="text-xs font-bold uppercase tracking-widest text-nexu-coral bg-nexu-coral/20 px-3 py-1 rounded-full">Calculadora de Impacto</span>
+        <h2 class="mt-4 font-heading font-extrabold text-3xl sm:text-4xl text-white tracking-tight">
+          Calcule quanto tempo e dinheiro sua empresa economizará
+        </h2>
+        <p class="mt-3 text-slate-400 text-sm sm:text-base">
+          Mova a barra abaixo com a quantidade de colaboradores para ver o ROI imediato.
+        </p>
+      </div>
+
+      <div class="mt-12 bg-slate-800/90 border border-slate-700 rounded-3xl p-6 sm:p-10 shadow-2xl">
+        <!-- Slider Input -->
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <label for="employeeSlider" class="text-sm sm:text-base font-semibold text-slate-200">Quantidade de Colaboradores:</label>
+            <span id="sliderValue" class="text-2xl font-bold font-heading text-nexu-coral">50</span>
+          </div>
+          <input type="range" id="employeeSlider" min="5" max="300" value="50" step="5" class="w-full h-3 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-nexu-coral">
+          <div class="flex justify-between text-xs text-slate-400">
+            <span>5 colaboradores</span>
+            <span>150</span>
+            <span>300+ colaboradores</span>
+          </div>
+        </div>
+
+        <!-- Calculated Stats Grid -->
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+          <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-700">
+            <div class="text-xs text-slate-400 font-medium">Horas Economizadas / Mês</div>
+            <div id="hoursSaved" class="mt-2 text-3xl font-extrabold font-heading text-white">40h</div>
+            <div class="mt-1 text-xs text-emerald-400">Tempo livre para RH estratégico</div>
+          </div>
+
+          <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-700">
+            <div class="text-xs text-slate-400 font-medium">Economia Estimada / Ano</div>
+            <div id="moneySaved" class="mt-2 text-3xl font-extrabold font-heading text-emerald-400">R$ 28.800</div>
+            <div class="mt-1 text-xs text-slate-400">Redução de custos operacionais</div>
+          </div>
+
+          <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-700">
+            <div class="text-xs text-slate-400 font-medium">Velocidade de Processos</div>
+            <div class="mt-2 text-3xl font-extrabold font-heading text-nexu-coral">4.8x</div>
+            <div class="mt-1 text-xs text-slate-400">Mais rápido que planilhas</div>
+          </div>
+        </div>
+
+        <div class="mt-8 text-center">
+          <button onclick="openModal()" class="px-8 py-3.5 rounded-xl bg-nexu-coral hover:bg-nexu-coralDark text-white font-semibold text-sm transition-all shadow-lg hover:shadow-nexu-coral/30">
+            Quero Economizar Agora na Minha Empresa &rarr;
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="depoimentos" class="py-20 md:py-28 bg-nexu-bgLight">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto">
+        <span class="text-xs font-bold uppercase tracking-widest text-nexu-coral bg-nexu-coralLight px-3 py-1 rounded-full">Histórias de Sucesso</span>
+        <h2 class="mt-4 font-heading font-extrabold text-3xl sm:text-4xl text-nexu-dark tracking-tight">
+          O que dizem os líderes que transformaram seus times
+        </h2>
+      </div>
+
+      <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+          <div>
+            <div class="flex text-amber-400 gap-1 mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            <p class="text-slate-700 text-sm leading-relaxed italic">
+              "Antes do NexuHR, eu passava 4 dias inteiros no final de cada mês fechando cartões de ponto e respondendo dúvidas de férias. Hoje eu faço tudo em 40 minutos. Foi a melhor decisão para o nosso RH."
+            </p>
+          </div>
+          <div class="mt-6 pt-6 border-t border-slate-100 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold text-xs">RC</div>
+            <div>
+              <div class="font-bold text-sm text-nexu-dark">Roberta Cavalcanti</div>
+              <div class="text-xs text-nexu-muted">Head de Pessoas na Vortex Tech (85 colaboradores)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+          <div>
+            <div class="flex text-amber-400 gap-1 mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            <p class="text-slate-700 text-sm leading-relaxed italic">
+              "A adesão do time foi de 100% no primeiro dia. Os colaboradores adoram o app para bater ponto e pedir folgas. E a assinatura digital de contratos nos poupou milhares de impressões."
+            </p>
+          </div>
+          <div class="mt-6 pt-6 border-t border-slate-100 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-nexu-coral text-white flex items-center justify-center font-bold text-xs">GF</div>
+            <div>
+              <div class="font-bold text-sm text-nexu-dark">Gustavo Freitas</div>
+              <div class="text-xs text-nexu-muted">CEO na Nova Health (140 colaboradores)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+          <div>
+            <div class="flex text-amber-400 gap-1 mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            <p class="text-slate-700 text-sm leading-relaxed italic">
+              "O Nexu AI Copilot é impressionante. Ele me avisa proativamente sobre férias acumuladas e prepara resumos gerenciais perfeitos para as reuniões de diretoria."
+            </p>
+          </div>
+          <div class="mt-6 pt-6 border-t border-slate-100 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-nexu-indigo text-white flex items-center justify-center font-bold text-xs">ML</div>
+            <div>
+              <div class="font-bold text-sm text-nexu-dark">Mariana Lacerda</div>
+              <div class="text-xs text-nexu-muted">Diretora de Operações na Lunar Logistics</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Table Section -->
+  <section id="precos" class="py-20 md:py-28 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto">
+        <span class="text-xs font-bold uppercase tracking-widest text-nexu-coral bg-nexu-coralLight px-3 py-1 rounded-full">Planos Transparentes</span>
+        <h2 class="mt-4 font-heading font-extrabold text-3xl sm:text-4xl text-nexu-dark tracking-tight">
+          Investimento previsível que cresce com a sua empresa
+        </h2>
+        <p class="mt-3 text-nexu-muted text-base sm:text-lg">
+          Todos os planos incluem 14 dias de teste grátis com acesso completo a todos os módulos.
+        </p>
+
+        <!-- Billing Toggle -->
+        <div class="mt-8 inline-flex items-center gap-3 bg-slate-100 p-1.5 rounded-2xl border border-slate-200">
+          <button id="monthlyBtn" onclick="setBilling('monthly')" class="px-5 py-2 rounded-xl text-xs font-bold bg-white text-nexu-dark shadow-sm transition-all">
+            Mensal
+          </button>
+          <button id="annualBtn" onclick="setBilling('annual')" class="px-5 py-2 rounded-xl text-xs font-bold text-nexu-muted hover:text-nexu-dark transition-all flex items-center gap-1.5">
+            <span>Anual</span>
+            <span class="bg-emerald-100 text-emerald-800 text-[10px] px-2 py-0.5 rounded-full font-extrabold">20% OFF</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Pricing Cards Grid -->
+      <div class="mt-14 grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+        <!-- Plan 1: Starter -->
+        <div class="bg-white border border-slate-200 rounded-3xl p-8 flex flex-col justify-between hover:border-slate-300 transition-all">
+          <div>
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-400">Para Equipes em Início</div>
+            <h3 class="mt-2 text-2xl font-bold font-heading text-nexu-dark">Starter</h3>
+            <p class="mt-2 text-xs text-nexu-muted">Ideal para empresas de até 20 colaboradores que buscam sair do Excel.</p>
+            
+            <div class="mt-6 flex items-baseline gap-1">
+              <span class="text-3xl font-extrabold font-heading text-nexu-dark price-val" data-monthly="R$ 14" data-annual="R$ 11">R$ 14</span>
+              <span class="text-xs text-slate-500">/colaborador /mês</span>
+            </div>
+
+            <ul class="mt-8 space-y-3.5 text-xs text-slate-700">
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                <span>Ponto digital via Web & Mobile (GPS)</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                <span>Gestão de férias e ausências</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                <span>Diretório de colaboradores e organograma</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                <span>Portal do Colaborador (Autosserviço)</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-8">
+            <button onclick="openModal('Starter')" class="w-full py-3 rounded-xl border border-slate-300 hover:bg-slate-50 font-semibold text-xs text-nexu-dark transition-colors">
+              Começar Teste Grátis
+            </button>
+          </div>
+        </div>
+
+        <!-- Plan 2: Growth (Highlighted) -->
+        <div class="bg-gradient-to-b from-white to-rose-50/40 border-2 border-nexu-coral rounded-3xl p-8 flex flex-col justify-between shadow-xl relative scale-105 z-10">
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-nexu-coral text-white text-[11px] font-extrabold uppercase tracking-wider px-4 py-1 rounded-full shadow-md">
+            Mais Popular
+          </div>
+
+          <div>
+            <div class="text-xs font-bold uppercase tracking-wider text-nexu-coral">Para Empresas em Crescimento</div>
+            <h3 class="mt-2 text-2xl font-bold font-heading text-nexu-dark">Growth & Pro</h3>
+            <p class="mt-2 text-xs text-nexu-muted">Para times de 20 a 150 colaboradores que querem automação completa e IA.</p>
+            
+            <div class="mt-6 flex items-baseline gap-1">
+              <span class="text-3xl font-extrabold font-heading text-nexu-dark price-val" data-monthly="R$ 24" data-annual="R$ 19">R$ 24</span>
+              <span class="text-xs text-slate-500">/colaborador /mês</span>
+            </div>
+
+            <ul class="mt-8 space-y-3.5 text-xs text-slate-700">
+              <li class="flex items-center gap-2.5 font-semibold text-nexu-dark">
+                <i data-lucide="check" class="w-4 h-4 text-nexu-coral"></i>
+                <span>Tudo do plano Starter, mais:</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                <span>Recrutamento & Seleção (ATS Kanban)</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                <span>Assinatura digital ilimitada de documentos</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                <span><strong>Nexu AI Copilot</strong> integrado</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                <span>Suporte prioritário via WhatsApp & Chat</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-8">
+            <button onclick="openModal('Growth & Pro')" class="w-full py-3.5 rounded-xl bg-nexu-coral hover:bg-nexu-coralDark text-white font-semibold text-xs transition-all shadow-lg hover:shadow-nexu-coral/30">
+              Experimentar Plano Growth Grátis
+            </button>
+          </div>
+        </div>
+
+        <!-- Plan 3: Enterprise -->
+        <div class="bg-white border border-slate-200 rounded-3xl p-8 flex flex-col justify-between hover:border-slate-300 transition-all">
+          <div>
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-400">Grandes Operações</div>
+            <h3 class="mt-2 text-2xl font-bold font-heading text-nexu-dark">Enterprise</h3>
+            <p class="mt-2 text-xs text-nexu-muted">Para operações com mais de 150 colaboradores com requisitos customizados.</p>
+            
+            <div class="mt-6 flex items-baseline gap-1">
+              <span class="text-3xl font-extrabold font-heading text-nexu-dark">Personalizado</span>
+            </div>
+
+            <ul class="mt-8 space-y-3.5 text-xs text-slate-700">
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                <span>Todas as funcionalidades sem limites</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                <span>Gerente de Sucesso de Conta dedicado (CSM)</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                <span>Integrações via API customizada & SSO / SAML</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                <span>SLA de atendimento de 99.9% garantido</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-8">
+            <button onclick="openModal('Enterprise')" class="w-full py-3 rounded-xl border border-slate-300 hover:bg-slate-50 font-semibold text-xs text-nexu-dark transition-colors">
+              Falar com Consultor Enterprise
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive FAQ Section (Accordion) -->
+  <section id="faq" class="py-20 md:py-28 bg-nexu-bgLight">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <span class="text-xs font-bold uppercase tracking-widest text-nexu-coral bg-nexu-coralLight px-3 py-1 rounded-full">Dúvidas Comuns</span>
+        <h2 class="mt-4 font-heading font-extrabold text-3xl sm:text-4xl text-nexu-dark tracking-tight">
+          Perguntas Frequentes sobre o NexuHR
+        </h2>
+      </div>
+
+      <div class="mt-12 space-y-4" id="faqAccordion">
+        <!-- FAQ 1 -->
+        <div class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden transition-all">
+          <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex items-center justify-between font-semibold text-sm sm:text-base text-nexu-dark hover:text-nexu-coral transition-colors">
+            <span>Como funciona o período de teste gratuito de 14 dias?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform"></i>
+          </button>
+          <div class="faq-answer px-6 pb-5 text-xs sm:text-sm text-nexu-muted leading-relaxed hidden">
+            Você tem acesso imediato e irrestrito a todos os módulos da plataforma durante 14 dias. Não solicitamos cartão de crédito no cadastro. Após o período, você pode escolher o plano ideal para continuar.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden transition-all">
+          <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex items-center justify-between font-semibold text-sm sm:text-base text-nexu-dark hover:text-nexu-coral transition-colors">
+            <span>O ponto eletrônico está de acordo com as leis do trabalho e MTE?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform"></i>
+          </button>
+          <div class="faq-answer px-6 pb-5 text-xs sm:text-sm text-nexu-muted leading-relaxed hidden">
+            Sim! O NexuHR cumpre rigorosamente as exigências da Portaria 671 do Ministério do Trabalho e Emprego (REP-P e REP-A), garantindo validade jurídica e segurança contra passivos trabalhistas.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden transition-all">
+          <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex items-center justify-between font-semibold text-sm sm:text-base text-nexu-dark hover:text-nexu-coral transition-colors">
+            <span>Como é feita a migração dos dados das nossas planilhas antigas?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform"></i>
+          </button>
+          <div class="faq-answer px-6 pb-5 text-xs sm:text-sm text-nexu-muted leading-relaxed hidden">
+            Oferecemos um importador automático via planilha Excel / CSV. Em menos de 10 minutos, toda a base de colaboradores, cargos e departamentos é importada sem perda de informações.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden transition-all">
+          <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex items-center justify-between font-semibold text-sm sm:text-base text-nexu-dark hover:text-nexu-coral transition-colors">
+            <span>Como a IA (Nexu AI Copilot) protege os dados confidenciais dos funcionários?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform"></i>
+          </button>
+          <div class="faq-answer px-6 pb-5 text-xs sm:text-sm text-nexu-muted leading-relaxed hidden">
+            Nossos modelos de IA são isolados e não utilizam os dados privados da sua empresa para treinamento público. Operamos com criptografia de ponta a ponta em total conformidade com a LGPD e GDPR.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final High-Impact CTA Banner -->
+  <section class="py-20 bg-gradient-to-r from-nexu-dark via-slate-900 to-nexu-dark text-white relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <h2 class="font-heading font-extrabold text-3xl sm:text-5xl text-white tracking-tight leading-tight">
+        Pronto para transformar o RH da sua empresa hoje mesmo?
+      </h2>
+      <p class="mt-5 text-base sm:text-lg text-slate-300 max-w-2xl mx-auto">
+        Junte-se a centenas de empresas que economizam tempo, reduzem custos e encantam seus colaboradores com o NexuHR.
+      </p>
+
+      <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <button onclick="openModal()" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-nexu-coral hover:bg-nexu-coralDark text-white font-bold text-sm sm:text-base shadow-xl hover:shadow-nexu-coral/40 transition-all flex items-center justify-center gap-2">
+          <span>Criar Conta de Teste Grátis</span>
+          <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </button>
+        <a href="../app/index.html" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-sm sm:text-base border border-slate-700 transition-all flex items-center justify-center gap-2">
+          <i data-lucide="play" class="w-5 h-5 text-nexu-indigo"></i>
+          <span>Explorar Aplicação Demo</span>
+        </a>
+      </div>
+      <p class="mt-4 text-xs text-slate-400">Sem cartão de crédito • Cancelamento a qualquer momento</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-400 py-14 border-t border-slate-800 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-10">
+        <!-- Brand Column -->
+        <div class="md:col-span-2 space-y-4">
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-lg bg-nexu-coral flex items-center justify-center text-white font-bold">
+              <i data-lucide="layers" class="w-5 h-5"></i>
+            </div>
+            <span class="font-heading font-extrabold text-xl text-white">Nexu<span class="text-nexu-coral">HR</span></span>
+          </div>
+          <p class="text-slate-400 leading-relaxed max-w-sm">
+            A plataforma tudo-em-um de RH inteligente que conecta pessoas, automatiza o departamento pessoal e impulsiona o crescimento de equipes modernas.
+          </p>
+          <div class="flex items-center gap-3 pt-2 text-slate-400">
+            <a href="#" class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center hover:text-white hover:bg-nexu-coral transition-all"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+            <a href="#" class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center hover:text-white hover:bg-nexu-coral transition-all"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+            <a href="#" class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center hover:text-white hover:bg-nexu-coral transition-all"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+            <a href="#" class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center hover:text-white hover:bg-nexu-coral transition-all"><i data-lucide="youtube" class="w-4 h-4"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Produto -->
+        <div class="space-y-3">
+          <div class="font-bold text-white uppercase text-[11px] tracking-wider">Módulos</div>
+          <ul class="space-y-2">
+            <li><a href="#modulos" class="hover:text-white transition-colors">Controle de Ponto</a></li>
+            <li><a href="#modulos" class="hover:text-white transition-colors">Férias & Ausências</a></li>
+            <li><a href="#modulos" class="hover:text-white transition-colors">Recrutamento ATS</a></li>
+            <li><a href="#modulos" class="hover:text-white transition-colors">Assinatura Digital</a></li>
+            <li><a href="#modulos" class="hover:text-white transition-colors">Nexu AI Copilot</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Empresa -->
+        <div class="space-y-3">
+          <div class="font-bold text-white uppercase text-[11px] tracking-wider">Empresa</div>
+          <ul class="space-y-2">
+            <li><a href="#beneficios" class="hover:text-white transition-colors">Sobre Nós</a></li>
+            <li><a href="#depoimentos" class="hover:text-white transition-colors">Clientes & Cases</a></li>
+            <li><a href="#precos" class="hover:text-white transition-colors">Planos & Preços</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Carreiras</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Blog de RH Tech</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Legal & Segurança -->
+        <div class="space-y-3">
+          <div class="font-bold text-white uppercase text-[11px] tracking-wider">Conformidade</div>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white transition-colors">Privacidade & LGPD</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Termos de Serviço</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Portaria 671 MTE</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Segurança de Dados</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Central de Ajuda</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-slate-500 gap-4">
+        <div>© 2026 NexuHR Inc. Todos os direitos reservados.</div>
+        <div class="flex items-center gap-4">
+          <span>Feito com paixão para impulsionar pessoas.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Modal for Demo / Free Trial -->
+  <div id="demoModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm hidden p-4">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-slate-200 relative animate-scaleUp">
+      <button onclick="closeModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="text-center">
+        <div class="w-12 h-12 rounded-2xl bg-nexu-coralLight text-nexu-coral flex items-center justify-center mx-auto mb-4">
+          <i data-lucide="sparkles" class="w-6 h-6"></i>
+        </div>
+        <h3 class="font-heading font-bold text-2xl text-nexu-dark">Comece seu Teste Grátis</h3>
+        <p class="mt-1 text-xs text-nexu-muted">Acesso instantâneo de 14 dias sem necessidade de cartão.</p>
+      </div>
+
+      <form id="modalForm" onsubmit="handleModalSubmit(event)" class="mt-6 space-y-4 text-left">
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Nome Completo</label>
+          <input type="text" required placeholder="Ex: Fernanda Lima" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-nexu-coral">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">E-mail Corporativo</label>
+          <input type="email" id="modalEmail" required placeholder="fernanda@empresa.com.br" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-nexu-coral">
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">Empresa</label>
+            <input type="text" required placeholder="Nome da empresa" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-nexu-coral">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">Nº Funcionários</label>
+            <select class="w-full px-3 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-nexu-coral bg-white">
+              <option value="1-20">1 a 20</option>
+              <option value="21-50" selected>21 a 50</option>
+              <option value="51-150">51 a 150</option>
+              <option value="150+">150+</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 bg-nexu-coral hover:bg-nexu-coralDark text-white font-bold rounded-xl text-sm transition-all shadow-md mt-2">
+          Liberar Meu Acesso Grátis &rarr;
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-slate-900 text-white px-5 py-3.5 rounded-2xl shadow-2xl flex items-center gap-3 border border-slate-700 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none text-xs sm:text-sm">
+    <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400"></i>
+    <span id="toastMsg">Cadastro realizado com sucesso!</span>
+  </div>
+
+  <!-- Custom Scripts -->
+  <script src="app.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
