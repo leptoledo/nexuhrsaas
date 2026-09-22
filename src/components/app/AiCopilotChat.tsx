@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
-import { Bot, Send, User } from 'lucide-react';
+import { Bot, Send } from 'lucide-react';
 
 interface ChatMessage {
   id: string;
@@ -14,7 +14,7 @@ export function AiCopilotChat() {
     {
       id: '1',
       sender: 'ai',
-      text: 'Olá, Mariana! Sou o **Nexu AI Copilot**, seu assistente de Inteligência Artificial para Departamento Pessoal e Gestão de Pessoas. Como posso ajudar sua equipe hoje?',
+      text: 'Olá, Mariana! Sou o **NexusLT AI Copilot**, o seu assistente de Inteligência Artificial para Gestão LT e Colaboradores em Portugal. Como posso apoiar a sua equipa hoje?',
     },
   ]);
   const [input, setInput] = useState('');
@@ -47,26 +47,26 @@ export function AiCopilotChat() {
       let aiReply = '';
       const lower = text.toLowerCase();
 
-      if (lower.includes('férias') || lower.includes('ausência') || lower.includes('vencer')) {
-        aiReply = `📊 **Análise de Férias & Ausências:**
-• Identifiquei **2 solicitações pendentes** no painel de aprovação (Mariana Santos e Lucas Gomes).
-• Mariana Santos possui **22 dias acumulados** com período concessivo próximo ao prazo legal em Novembro.
-• Recomendo priorizar a aprovação das férias regulares de 10 dias em Setembro.`;
-      } else if (lower.includes('vaga') || lower.includes('desenvolvedor') || lower.includes('descrição')) {
-        aiReply = `📝 **Descrição de Vaga Gerada:**
-**Cargo:** Desenvolvedor React / Next.js Senior
-**Modalidade:** Híbrido / Remoto • CLT
-**Requisitos:**
-- Domínio de React 18/19, Next.js (App Router) e TypeScript.
-- Experiência com Tailwind CSS, Supabase / PostgreSQL e deploy na Vercel.
-- Foco em acessibilidade e arquitetura multi-tenant escalável.`;
-      } else if (lower.includes('clt') || lower.includes('banco de horas') || lower.includes('horas extras')) {
-        aiReply = `⚖️ **Diretriz Trabalhista (CLT & Portaria 671 MTE):**
-• **Banco de Horas Individual:** Válido por acordo individual escrito com compensação em até **6 meses** (Art. 59, § 5º da CLT).
-• **Limite Legal:** Máximo de 2 horas suplementares por jornada diária.
-• Os registros eletrônicos no NexuHR utilizam assinatura digital e carimbo de tempo inviolável em total conformidade com a legislação.`;
+      if (lower.includes('férias') || lower.includes('ausência') || lower.includes('mapa')) {
+        aiReply = `📊 **Análise de Férias & Ausências (Código do Trabalho):**
+• Identifiquei **2 pedidos pendentes** de aprovação (Mariana Santos e Lucas Gomes).
+• Mariana Santos possui **22 dias úteis de saldo** no mapa anual.
+• Recomendo aprovar o pedido de 9 dias úteis para Setembro, assegurando a afixação obrigatória prevista no Art.º 241.º da Lei n.º 7/2009.`;
+      } else if (lower.includes('vaga') || lower.includes('engenheiro') || lower.includes('descrição') || lower.includes('função')) {
+        aiReply = `📝 **Perfil de Função Gerado:**
+**Função:** Engenheiro de Software React / Next.js Sénior
+**Regime:** Híbrido (Porto, Portugal) • Contrato Sem Termo
+**Competências Requeridas:**
+- Domínio de React, Next.js (App Router) e TypeScript.
+- Experiência em bases de dados relacionais (PostgreSQL/Supabase) e deploy em cloud.
+- Sensibilidade para segurança de dados (RGPD) e arquitetura de software escalável.`;
+      } else if (lower.includes('código do trabalho') || lower.includes('act') || lower.includes('banco de horas') || lower.includes('horas')) {
+        aiReply = `⚖️ **Enquadramento Laboral (Código do Trabalho & ACT):**
+• **Registo de Assiduidade:** Obrigatório por lei para todos os trabalhadores (Art.º 202.º), devendo estar acessível para fiscalização da ACT.
+• **Banco de Horas Individual:** Pode ser acordado por escrito, com acréscimo até **2 horas diárias** e um limite máximo de **150 horas anuais** (Art.º 208.º-B).
+• O NexusLT mantém todos os registos de picagem geovalidados com carimbo de tempo inviolável.`;
       } else {
-        aiReply = `Entendido! Sua organização **Vortex Tech** conta atualmente com **8 colaboradores ativos**, assiduidade média de **94.2%** e **3 vagas no funil de recrutamento**. Se precisar de relatórios de turnover, cartas de admissão ou minutas contratuais, é só solicitar!`;
+        aiReply = `Compreendido! A sua organização **Vortex Tech Lda. (Porto)** conta atualmente com **8 colaboradores ativos**, assiduidade semanal média de **94.2%** e **3 ofertas de trabalho no pipeline**. Se necessitar de minutas contratuais ou mapas de férias, estou à disposição!`;
       }
 
       const aiMsg: ChatMessage = {
@@ -81,10 +81,10 @@ export function AiCopilotChat() {
   };
 
   const quickPrompts = [
-    '🌴 Resumo de férias dos colaboradores',
-    '📝 Gerar descrição de vaga para Desenvolvedor Senior',
-    '⚖️ Regras da CLT sobre banco de horas',
-    '💡 Dicas para engajamento e redução de turnover',
+    '🌴 Resumo do mapa de férias da equipa',
+    '📝 Gerar perfil de função para Engenheiro Sénior no Porto',
+    '⚖️ Regras do Código do Trabalho sobre banco de horas e ACT',
+    '💡 Sugestões para retenção de talento e satisfação da equipa',
   ];
 
   return (
@@ -97,13 +97,13 @@ export function AiCopilotChat() {
           </div>
           <div>
             <div className="font-heading font-bold text-sm text-white flex items-center gap-2">
-              <span>Nexu AI Copilot</span>
+              <span>NexusLT AI Copilot</span>
               <span className="bg-nexu-indigo text-[9px] font-extrabold px-1.5 py-0.5 rounded">
                 PRO ACTIVE
               </span>
             </div>
             <div className="text-[11px] text-slate-400">
-              Treinado em DP, Legislação Trabalhista Brasileira e Métricas de RH
+              Treinado no Código do Trabalho Português, Normas da ACT e Métricas de Gestão LT
             </div>
           </div>
         </div>
@@ -148,7 +148,7 @@ export function AiCopilotChat() {
               <Bot className="w-4 h-4 animate-pulse" />
             </div>
             <div className="bg-slate-100 p-3 rounded-2xl rounded-tl-none text-slate-500 italic text-xs">
-              Nexu AI está consultando a base de dados da empresa...
+              O NexusLT AI está a consultar a base de dados da organização...
             </div>
           </div>
         )}
@@ -181,7 +181,7 @@ export function AiCopilotChat() {
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="Pergunte qualquer coisa sobre DP, métricas ou legislação..."
+          placeholder="Pergunte qualquer questão sobre o Código do Trabalho, ACT ou métricas da equipa..."
           className="flex-1 px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nexu-indigo text-xs"
         />
         <button

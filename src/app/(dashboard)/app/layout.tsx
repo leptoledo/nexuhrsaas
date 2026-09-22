@@ -20,8 +20,8 @@ export default function DashboardLayout({
   };
 
   const handleQuickPunch = () => {
-    const time = new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
-    showToast(`⏱️ Ponto Rápido registrado com sucesso às ${time} (GPS Validado)!`);
+    const time = new Date().toLocaleTimeString('pt-PT', { hour: '2-digit', minute: '2-digit' });
+    showToast(`⏱️ Ponto Picado com sucesso às ${time} (Porto / GPS Validado conforme ACT)!`);
   };
 
   return (

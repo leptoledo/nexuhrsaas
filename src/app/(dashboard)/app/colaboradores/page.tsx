@@ -18,7 +18,8 @@ export default function ColaboradoresPage() {
   const [role, setRole] = useState('');
   const [dept, setDept] = useState('Tecnologia');
   const [date, setDate] = useState('');
-  const [salary, setSalary] = useState('10000');
+  const [nif, setNif] = useState('');
+  const [salary, setSalary] = useState('2200');
 
   const showToast = (msg: string) => {
     setToastMsg(msg);
@@ -28,7 +29,8 @@ export default function ColaboradoresPage() {
   const filteredEmployees = employees.filter((emp) => {
     const matchesText =
       emp.full_name.toLowerCase().includes(filterText.toLowerCase()) ||
-      emp.email.toLowerCase().includes(filterText.toLowerCase());
+      emp.email.toLowerCase().includes(filterText.toLowerCase()) ||
+      (emp.nif && emp.nif.includes(filterText));
     const matchesDept = deptFilter === 'ALL' || emp.department === deptFilter;
     return matchesText && matchesDept;
   });
@@ -40,11 +42,14 @@ export default function ColaboradoresPage() {
       organization_id: 'org-vortex',
       full_name: name,
       email,
+      phone: '+351 910 000 000',
+      nif: nif || '299888777',
+      niss: '12998887770',
       role_title: role,
       department: dept,
       admission_date: date || '2026-09-20',
-      salary: Number(salary) || 0,
-      vacation_balance_days: 30,
+      salary: Number(salary) || 2000,
+      vacation_balance_days: 22,
       status: 'active',
       avatar_color: 'bg-nexu-coral',
     };
@@ -54,12 +59,13 @@ export default function ColaboradoresPage() {
     setName('');
     setEmail('');
     setRole('');
-    showToast(`🎉 ${name} adicionado(a) com sucesso! Acesso gerado.`);
+    setNif('');
+    showToast(`🎉 ${name} registado(a) com sucesso! Acesso gerado.`);
   };
 
   const handleRemove = (id: string) => {
     setEmployees(employees.filter((e) => e.id !== id));
-    showToast('Colaborador removido.');
+    showToast('Colaborador removido da organização.');
   };
 
   return (
@@ -71,7 +77,7 @@ export default function ColaboradoresPage() {
             Diretório de Colaboradores
           </h2>
           <p className="text-xs text-slate-500 mt-1">
-            Gerencie todos os membros do time, contratos e departamentos em uma base única.
+            Faça a gestão da sua equipa no Porto, contratos e departamentos em conformidade com o Código do Trabalho.
           </p>
         </div>
         <button
@@ -79,7 +85,7 @@ export default function ColaboradoresPage() {
           className="px-4 py-2.5 rounded-xl bg-nexu-coral hover:bg-nexu-coralDark text-white text-xs font-bold transition-all shadow-md flex items-center gap-2"
         >
           <Plus className="w-4 h-4" />
-          <span>Adicionar Colaborador</span>
+          <span>Registar Colaborador</span>
         </button>
       </div>
 
@@ -91,7 +97,7 @@ export default function ColaboradoresPage() {
             type="text"
             value={filterText}
             onChange={(e) => setFilterText(e.target.value)}
-            placeholder="Filtrar por nome ou e-mail..."
+            placeholder="Filtrar por nome, e-mail ou NIF..."
             className="w-full pl-9 pr-3 py-2 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nexu-coral text-xs"
           />
         </div>
@@ -105,8 +111,8 @@ export default function ColaboradoresPage() {
             <option value="Tecnologia">Tecnologia</option>
             <option value="Design">Design</option>
             <option value="Produto">Produto</option>
-            <option value="RH & DP">RH & DP</option>
-            <option value="Vendas">Vendas</option>
+            <option value="Gestão LT">Gestão LT</option>
+            <option value="Comercial">Comercial</option>
           </select>
         </div>
       </div>
@@ -119,10 +125,12 @@ export default function ColaboradoresPage() {
               <tr>
                 <th className="py-3.5 px-4">Colaborador</th>
                 <th className="py-3.5 px-4">Cargo</th>
+                <th className="py-3.5 px-4">NIF</th>
                 <th className="py-3.5 px-4">Departamento</th>
                 <th className="py-3.5 px-4">Admissão</th>
+                <th className="py-3.5 px-4">Vencimento Base</th>
                 <th className="py-3.5 px-4">Saldo Férias</th>
-                <th className="py-3.5 px-4">Status</th>
+                <th className="py-3.5 px-4">Estado</th>
                 <th className="py-3.5 px-4 text-right">Ações</th>
               </tr>
             </thead>
@@ -147,18 +155,20 @@ export default function ColaboradoresPage() {
                     </div>
                   </td>
                   <td className="py-3.5 px-4 text-slate-700">{emp.role_title}</td>
+                  <td className="py-3.5 px-4 font-mono text-slate-600">{emp.nif || 'N/D'}</td>
                   <td className="py-3.5 px-4">
                     <span className="bg-slate-100 text-slate-700 font-semibold px-2 py-0.5 rounded-md text-[11px] border border-slate-200">
                       {emp.department}
                     </span>
                   </td>
                   <td className="py-3.5 px-4 text-slate-500">{emp.admission_date}</td>
+                  <td className="py-3.5 px-4 font-semibold text-slate-800">{emp.salary} €</td>
                   <td
                     className={`py-3.5 px-4 font-bold ${
                       emp.vacation_balance_days > 15 ? 'text-amber-600' : 'text-slate-700'
                     }`}
                   >
-                    {emp.vacation_balance_days} dias
+                    {emp.vacation_balance_days} dias úteis
                   </td>
                   <td className="py-3.5 px-4">
                     <span className="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded-full">
@@ -167,10 +177,10 @@ export default function ColaboradoresPage() {
                   </td>
                   <td className="py-3.5 px-4 text-right">
                     <button
-                      onClick={() => showToast(`Visualizando perfil de ${emp.full_name}`)}
+                      onClick={() => showToast(`A visualizar ficha de ${emp.full_name}`)}
                       className="text-nexu-coral hover:underline font-bold mr-2"
                     >
-                      Ver Perfil
+                      Ver Ficha
                     </button>
                     <button
                       onClick={() => handleRemove(emp.id)}
@@ -199,10 +209,10 @@ export default function ColaboradoresPage() {
             </button>
 
             <h3 className="font-heading font-bold text-xl text-slate-900 mb-1">
-              Cadastrar Novo Colaborador
+              Registar Novo Colaborador
             </h3>
             <p className="text-xs text-slate-500 mb-6">
-              Preencha os dados contratuais para gerar o acesso imediato ao painel.
+              Preencha os dados contratuais para gerar o acesso imediato e cumprir o registo obrigatório.
             </p>
 
             <form onSubmit={handleCreate} className="space-y-4 text-xs">
@@ -226,7 +236,7 @@ export default function ColaboradoresPage() {
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="rodrigo@empresa.com"
+                    placeholder="rodrigo@empresa.pt"
                     className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-nexu-coral"
                   />
                 </div>
@@ -245,6 +255,32 @@ export default function ColaboradoresPage() {
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
+                  <label className="block font-semibold text-slate-700 mb-1">NIF (Portugal)</label>
+                  <input
+                    type="text"
+                    required
+                    value={nif}
+                    onChange={(e) => setNif(e.target.value)}
+                    placeholder="Ex: 245678910"
+                    maxLength={9}
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-nexu-coral font-mono"
+                  />
+                </div>
+                <div>
+                  <label className="block font-semibold text-slate-700 mb-1">Vencimento Base (€)</label>
+                  <input
+                    type="number"
+                    required
+                    value={salary}
+                    onChange={(e) => setSalary(e.target.value)}
+                    placeholder="Ex: 2200"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-nexu-coral font-mono"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-3">
+                <div>
                   <label className="block font-semibold text-slate-700 mb-1">Departamento</label>
                   <select
                     value={dept}
@@ -254,8 +290,8 @@ export default function ColaboradoresPage() {
                     <option value="Tecnologia">Tecnologia</option>
                     <option value="Design">Design</option>
                     <option value="Produto">Produto</option>
-                    <option value="RH & DP">RH & DP</option>
-                    <option value="Vendas">Vendas</option>
+                    <option value="Gestão LT">Gestão LT</option>
+                    <option value="Comercial">Comercial</option>
                   </select>
                 </div>
                 <div>
@@ -274,7 +310,7 @@ export default function ColaboradoresPage() {
                 type="submit"
                 className="w-full py-3.5 bg-nexu-coral hover:bg-nexu-coralDark text-white font-bold rounded-xl text-xs transition-all shadow-md mt-4"
               >
-                Salvar e Gerar Acesso
+                Registar e Gerar Acesso
               </button>
             </form>
           </div>

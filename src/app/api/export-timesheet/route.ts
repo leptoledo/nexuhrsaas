@@ -5,16 +5,18 @@ export const dynamic = 'force-dynamic';
 
 export async function GET() {
   const exportData = {
-    organization: 'Vortex Tech Soluções',
+    organization: 'Vortex Tech Soluções Lda.',
+    sede: 'Porto, Portugal',
     generated_at: new Date().toISOString(),
-    standard: 'Portaria 671 MTE (REP-P)',
+    standard: 'Código do Trabalho (Lei n.º 7/2009 - Artigo 202.º / Inspeção ACT)',
+    currency: 'EUR (€)',
     employees_count: INITIAL_EMPLOYEES.length,
     records: INITIAL_TIME_RECORDS,
   };
 
   return NextResponse.json(exportData, {
     headers: {
-      'Content-Disposition': 'attachment; filename="espelho_ponto_fiscal.json"',
+      'Content-Disposition': 'attachment; filename="extrato_assiduidade_act.json"',
     },
   });
 }

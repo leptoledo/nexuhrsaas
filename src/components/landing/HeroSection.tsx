@@ -40,12 +40,12 @@ export function HeroSection() {
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-nexu-coralLight border border-nexu-coral/20 text-nexu-coral text-xs md:text-sm font-semibold mb-6 animate-pulse-subtle">
           <Sparkles className="w-4 h-4" />
-          <span>A Plataforma de RH All-in-One nº 1 para Empresas em Crescimento</span>
+          <span>A Plataforma All-in-One de Gestão LT nº 1 para Empresas em Portugal</span>
         </div>
 
         {/* Main Headline */}
         <h1 className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-nexu-dark tracking-tight max-w-4xl mx-auto leading-[1.15]">
-          RH sem atritos, <br className="hidden sm:inline" />
+          Gestão LT sem atritos, <br className="hidden sm:inline" />
           <span className="bg-gradient-to-r from-nexu-coral via-rose-500 to-nexu-indigo bg-clip-text text-transparent">
             pessoas em primeiro lugar.
           </span>
@@ -53,7 +53,7 @@ export function HeroSection() {
 
         {/* Subtitle */}
         <p className="mt-6 text-lg sm:text-xl text-nexu-muted max-w-2xl mx-auto leading-relaxed">
-          Centralize ponto digital com GPS, férias, admissões, documentos e recrutamento em uma única plataforma intuitiva com IA que economiza até <strong>70% das tarefas manuais de DP</strong>.
+          Centralize o registo de assiduidade com GPS, mapa de férias legal, admissões, documentos e recrutamento numa única plataforma intuitiva com IA que poupa até <strong>70% das tarefas manuais de LT</strong>. Sediado no Porto.
         </p>
 
         {/* CTA Box */}
@@ -63,7 +63,7 @@ export function HeroSection() {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Seu e-mail corporativo..."
+              placeholder="O seu e-mail corporativo..."
               className="w-full px-4 py-3.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-nexu-coral text-sm shadow-sm bg-white"
             />
           </div>
@@ -84,11 +84,11 @@ export function HeroSection() {
           </div>
           <div className="flex items-center gap-1.5">
             <ShieldCheck className="w-4 h-4 text-nexu-indigo" />
-            <span>100% Conforme Portaria 671 MTE & LGPD</span>
+            <span>100% Conforme o Código do Trabalho & ACT</span>
           </div>
           <div className="flex items-center gap-1.5">
             <Zap className="w-4 h-4 text-nexu-amber" />
-            <span>Setup em 15 minutos</span>
+            <span>Criado no Porto com suporte local</span>
           </div>
         </div>
 
@@ -104,14 +104,14 @@ export function HeroSection() {
               </div>
               <div className="text-xs text-slate-400 font-mono bg-white px-3 py-0.5 rounded-md border border-slate-200 flex items-center gap-1">
                 <Lock className="w-3 h-3 text-slate-400" />
-                app.nexuhr.com/dashboard
+                app.nexuslt.pt/dashboard
               </div>
               <div className="flex items-center gap-2">
                 <Link
                   href="/app"
                   className="text-xs bg-nexu-coral text-white font-semibold px-2.5 py-1 rounded-lg hover:bg-nexu-coralDark transition-colors flex items-center gap-1 shadow-sm"
                 >
-                  <span>Abrir App Completo</span>
+                  <span>Abrir Aplicação Completa</span>
                   <ExternalLink className="w-3 h-3" />
                 </Link>
               </div>
@@ -122,7 +122,7 @@ export function HeroSection() {
               {/* Stat Card 1 */}
               <div className="bg-gradient-to-br from-slate-900 to-slate-800 text-white p-4 rounded-xl shadow-sm">
                 <div className="flex items-center justify-between text-xs text-slate-400">
-                  <span>Presença em Tempo Real</span>
+                  <span>Presença em Tempo Real (Porto)</span>
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
                 </div>
                 <div className="mt-2 text-2xl font-bold font-heading">48 / 52</div>
@@ -144,11 +144,11 @@ export function HeroSection() {
                   <span>Férias & Ausências Pendentes</span>
                   <Calendar className="w-4 h-4 text-nexu-coral" />
                 </div>
-                <div className="mt-2 text-2xl font-bold font-heading text-nexu-dark">2 Solicitações</div>
+                <div className="mt-2 text-2xl font-bold font-heading text-nexu-dark">2 Pedidos</div>
                 <div className="mt-1 text-xs text-nexu-muted">Mariana Santos e Lucas Gomes</div>
                 <div className="mt-3 flex items-center gap-2">
                   <span className="text-xs bg-amber-100 text-amber-800 font-semibold px-2 py-0.5 rounded-full">
-                    Aguardando RH
+                    A aguardar Gestão LT
                   </span>
                   <span className="text-xs text-nexu-muted">Aprovação em 1 clique</span>
                 </div>
@@ -159,21 +159,21 @@ export function HeroSection() {
                 <div className="flex items-center justify-between text-xs text-nexu-indigo font-semibold">
                   <span className="flex items-center gap-1.5">
                     <Bot className="w-4 h-4 text-nexu-indigo" />
-                    Nexu AI Copilot
+                    NexusLT AI Copilot
                   </span>
                   <span className="text-[10px] bg-nexu-indigo text-white px-1.5 py-0.5 rounded font-bold">
                     ONLINE
                   </span>
                 </div>
                 <p className="mt-2 text-xs text-slate-700 leading-relaxed italic">
-                  &ldquo;Identifiquei que 3 colaboradores possuem banco de horas positivo para compensar este mês.&rdquo;
+                  &ldquo;Identifiquei que 3 colaboradores atingiram mais de 10 horas suplementares este mês. Deseja compensar em descanso conforme o Código do Trabalho?&rdquo;
                 </p>
                 <div className="mt-3 flex items-center gap-2">
                   <Link
                     href="/app/ai-copilot"
                     className="text-xs bg-nexu-indigo text-white px-2.5 py-1 rounded-lg font-medium hover:bg-indigo-700 transition-colors"
                   >
-                    Conversar com IA
+                    Conversar com a IA
                   </Link>
                 </div>
               </div>
@@ -186,8 +186,8 @@ export function HeroSection() {
               <Clock className="w-5 h-5" />
             </div>
             <div className="text-left text-xs">
-              <div className="font-bold text-nexu-dark">Ponto Registrado via GPS</div>
-              <div className="text-nexu-muted">08:58 - Lucas Gomes (Presencial)</div>
+              <div className="font-bold text-nexu-dark">Ponto Picado via GPS</div>
+              <div className="text-nexu-muted">08:58 - Lucas Gomes (Porto)</div>
             </div>
           </div>
 
@@ -197,7 +197,7 @@ export function HeroSection() {
             </div>
             <div className="text-left text-xs">
               <div className="font-bold text-nexu-dark">Contrato Assinado Digitalmente</div>
-              <div className="text-nexu-muted">Validade jurídica com 1 clique</div>
+              <div className="text-nexu-muted">Conforme eIDAS e legislação portuguesa</div>
             </div>
           </div>
         </div>

@@ -25,16 +25,16 @@ export default function PontoPage() {
   };
 
   const handlePunch = (type: PunchType, label: string) => {
-    const time = new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
-    showToast(`⏱️ ${label} registrado com sucesso às ${time}! Comprovante assinado.`);
+    const time = new Date().toLocaleTimeString('pt-PT', { hour: '2-digit', minute: '2-digit' });
+    showToast(`⏱️ ${label} picado com sucesso às ${time}! Registo geovalidado no Porto conforme a ACT.`);
   };
 
   const timesheet: PunchRecord[] = [
     {
       date: 'Seg, 15 Set',
       entry1: '09:00',
-      breakStart: '12:00',
-      breakEnd: '13:00',
+      breakStart: '12:30',
+      breakEnd: '13:30',
       exit2: '18:00',
       totalHours: '08h 00m',
       balance: '0h 00m',
@@ -43,18 +43,18 @@ export default function PontoPage() {
     {
       date: 'Ter, 16 Set',
       entry1: '08:45',
-      breakStart: '12:00',
-      breakEnd: '13:00',
+      breakStart: '12:30',
+      breakEnd: '13:30',
       exit2: '18:45',
       totalHours: '09h 00m',
-      balance: '+1h 00m',
+      balance: '+1h Suplementar',
       balanceColor: 'text-nexu-coral font-bold',
     },
     {
       date: 'Qua, 17 Set',
       entry1: '09:00',
-      breakStart: '12:00',
-      breakEnd: '13:00',
+      breakStart: '12:30',
+      breakEnd: '13:30',
       exit2: '18:00',
       totalHours: '08h 00m',
       balance: '0h 00m',
@@ -63,8 +63,8 @@ export default function PontoPage() {
     {
       date: 'Qui, 18 Set',
       entry1: '08:50',
-      breakStart: '12:10',
-      breakEnd: '13:10',
+      breakStart: '12:30',
+      breakEnd: '13:30',
       exit2: '18:10',
       totalHours: '08h 20m',
       balance: '+0h 20m',
@@ -73,8 +73,8 @@ export default function PontoPage() {
     {
       date: 'Sex, 19 Set',
       entry1: '09:05',
-      breakStart: '12:00',
-      breakEnd: '13:00',
+      breakStart: '12:30',
+      breakEnd: '13:30',
       exit2: '18:05',
       totalHours: '08h 00m',
       balance: '0h 00m',
@@ -86,10 +86,10 @@ export default function PontoPage() {
     <div className="space-y-6">
       <div>
         <h2 className="font-heading font-extrabold text-2xl text-slate-900">
-          Ponto Eletrônico & Espelho de Horas
+          Registo de Assiduidade & Tempos de Trabalho
         </h2>
         <p className="text-xs text-slate-500 mt-1">
-          Registro digital com geolocalização e cálculo automático conforme as diretrizes da Portaria 671 MTE.
+          Registo diário com geolocalização e cálculo automático segundo o Artigo 202.º do Código do Trabalho (Lei n.º 7/2009) e normas da ACT.
         </p>
       </div>
 
@@ -100,14 +100,14 @@ export default function PontoPage() {
       <div className="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm">
         <div className="flex items-center justify-between mb-4">
           <h3 className="font-heading font-bold text-base text-slate-900">
-            Espelho de Ponto Individual (Setembro/2026)
+            Extrato de Assiduidade Individual (Setembro/2026)
           </h3>
           <button
-            onClick={() => showToast('📥 Relatório fiscal exportado com sucesso (AFDT / ACJEF)!')}
+            onClick={() => showToast('📥 Extrato de assiduidade exportado em formato homologado pela ACT!')}
             className="px-3.5 py-1.5 rounded-lg border border-slate-200 text-xs font-semibold text-slate-700 hover:bg-slate-50 flex items-center gap-1.5 transition-colors"
           >
             <Download className="w-3.5 h-3.5" />
-            <span>Exportar Folha</span>
+            <span>Exportar Relatório ACT</span>
           </button>
         </div>
 
@@ -117,11 +117,11 @@ export default function PontoPage() {
               <tr>
                 <th className="py-3 px-4">Data</th>
                 <th className="py-3 px-4">Entrada 1</th>
-                <th className="py-3 px-4">Saída Intervalo</th>
-                <th className="py-3 px-4">Retorno Intervalo</th>
+                <th className="py-3 px-4">Pausa Almoço</th>
+                <th className="py-3 px-4">Regresso Almoço</th>
                 <th className="py-3 px-4">Saída 2</th>
                 <th className="py-3 px-4">Total Trabalhado</th>
-                <th className="py-3 px-4">Saldo Banco</th>
+                <th className="py-3 px-4">Saldo / Banco Horas</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100">

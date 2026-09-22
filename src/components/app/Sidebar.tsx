@@ -21,10 +21,10 @@ import { createClient } from '@/lib/supabase/client';
 export function Sidebar() {
   const pathname = usePathname();
   const router = useRouter();
-  const supabase = createClient();
 
   const handleLogout = async () => {
     try {
+      const supabase = createClient();
       await supabase.auth.signOut();
     } catch {
       // ignore
@@ -35,10 +35,10 @@ export function Sidebar() {
   const navLinks = [
     { href: '/app', label: 'Dashboard Geral', icon: LayoutDashboard },
     { href: '/app/colaboradores', label: 'Colaboradores', icon: Users, badge: '8' },
-    { href: '/app/ponto', label: 'Ponto & Horas', icon: Clock },
+    { href: '/app/ponto', label: 'Assiduidade & Ponto', icon: Clock },
     { href: '/app/ferias', label: 'Férias & Ausências', icon: Palmtree, badge: '2', badgeColor: 'bg-amber-500/20 text-amber-300' },
     { href: '/app/recrutamento', label: 'Recrutamento (ATS)', icon: Briefcase, badge: '5', badgeColor: 'bg-emerald-500/20 text-emerald-300' },
-    { href: '/app/documentos', label: 'Documentos', icon: FileCheck },
+    { href: '/app/documentos', label: 'Documentos & Vencimentos', icon: FileCheck },
     { href: '/app/configuracoes', label: 'Configurações', icon: Settings },
   ];
 
@@ -51,12 +51,17 @@ export function Sidebar() {
             <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-nexu-coral to-rose-400 flex items-center justify-center text-white shadow">
               <Layers className="w-4 h-4" />
             </div>
-            <span className="font-heading font-extrabold text-xl text-white tracking-tight">
-              Nexu<span className="text-nexu-coral">HR</span>
-            </span>
+            <div className="flex flex-col">
+              <span className="font-heading font-extrabold text-xl text-white tracking-tight">
+                Nexus<span className="text-nexu-coral">LT</span>
+              </span>
+              <span className="text-[9px] font-bold uppercase tracking-widest text-slate-400 -mt-1">
+                Porto • PT 🇵🇹
+              </span>
+            </div>
           </Link>
           <span className="text-[10px] bg-slate-800 text-slate-400 font-mono px-2 py-0.5 rounded border border-slate-700">
-            SaaS v2.4
+            v2.4
           </span>
         </div>
 
@@ -104,7 +109,7 @@ export function Sidebar() {
               }`}
             >
               <Bot className="w-4 h-4 text-indigo-400 animate-pulse" />
-              <span>Nexu AI Copilot</span>
+              <span>NexusLT AI Copilot</span>
               <span className="ml-auto text-[9px] bg-nexu-indigo text-white font-bold px-1.5 py-0.5 rounded">
                 PRO
               </span>
@@ -120,7 +125,7 @@ export function Sidebar() {
           className="flex items-center justify-center gap-2 w-full py-2 mb-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-medium transition-colors"
         >
           <ArrowLeft className="w-3.5 h-3.5" />
-          <span>Voltar à Landing Page</span>
+          <span>Voltar ao Site</span>
         </Link>
 
         <div className="flex items-center justify-between p-2 rounded-xl bg-slate-800/60">
@@ -129,13 +134,13 @@ export function Sidebar() {
               MS
             </div>
             <div className="text-xs overflow-hidden">
-              <div className="font-bold text-white truncate">Mariana Silva</div>
-              <div className="text-[11px] text-slate-400 truncate">Vortex Tech (Admin)</div>
+              <div className="font-bold text-white truncate">Mariana Santos</div>
+              <div className="text-[11px] text-slate-400 truncate">Vortex Tech Porto (Admin)</div>
             </div>
           </div>
           <button
             onClick={handleLogout}
-            title="Sair da conta"
+            title="Terminar sessão"
             className="p-1.5 text-slate-400 hover:text-red-400 rounded-lg transition-colors"
           >
             <LogOut className="w-4 h-4" />

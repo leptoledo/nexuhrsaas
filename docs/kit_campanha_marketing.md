@@ -1,142 +1,93 @@
-# 🚀 Kit de Campanha de Marketing & Copywriting de Lançamento: NexuHR
+# Kit de Campanhas de Marketing & Publicidade — NexusLT (Portugal)
 
-**Data de Emissão:** 23 de Agosto de 2026  
-**Responsável:** Especialista Criativo e Copywriter (`criativo`)  
-**Campanha:** *"Lançamento Oficial NexuHR — O Fim do RH no Escuro"*  
-
----
-
-## 1. 💡 The Big Idea & Conceito da Campanha
-
-### 1.1. Tema Central
-> **"Seu RH não nasceu para preencher planilhas. Automatize o Departamento Pessoal e lidere pessoas com a inteligência do NexuHR."**
-
-### 1.2. Ângulos de Abordagem & Gatilhos Mentais
-1. **Ângulo 1: Ganho de Tempo & Fim do Caos (Alívio/Praticidade)**
-   - *Gancho:* "Quantas horas do seu mês vão embora conferindo espelho de ponto e calculando saldo de férias no Excel?"
-2. **Ângulo 2: Redução de Passivo Jurídico & Segurança (Certeza/Controle)**
-   - *Gancho:* "Ponto eletrônico homologado, assinatura digital e conformidade trabalhista sem dor de cabeça."
-3. **Ângulo 3: Retenção de Talentos & Experiência do Colaborador (Modernidade/Cultura)**
-   - *Gancho:* "Dê aos seus colaboradores um app onde eles resolvem férias, ponto e holerite em 10 segundos."
+**Campanha de Lançamento:** "Gestão LT sem Fricção: Do Porto para todo o ecossistema empresarial português."  
+**Língua:** Português de Portugal (PT-PT)  
+**Moeda:** Euro (€)  
+**Alvo:** Diretores Gerais, CEOs, Gestores de Operações e Responsáveis de LT de PMEs em Portugal (10 a 250 colaboradores).
 
 ---
 
-## 2. 📱 Anúncios para Redes Sociais (Meta Ads & Instagram/Facebook)
+## 1. O Conceito Criativo (*The Big Idea*)
 
-### Variação A (Foco em Dor & Contraste)
-- **Formato:** Carrossel / Imagem Única com Mockup da Plataforma (1080x1080)
-- **Texto Principal (Copy):**
-  > Ainda usando 5 planilhas diferentes para fechar o ponto e aprovar férias? 🤦‍♂️
-  > 
-  > A burocracia do DP está roubando o tempo que você deveria investir no que realmente importa: **cuidar e desenvolver as pessoas da sua empresa.**
-  > 
-  > Com o **NexuHR**, você centraliza tudo em uma única tela:
-  > ✅ Ponto digital com geolocalização e espelho automático  
-  > ✅ Solicitação e aprovação de férias em 1 clique  
-  > ✅ Recrutamento ágil em quadro Kanban  
-  > ✅ Assinatura eletrônica de contratos e holerites  
-  > ✅ IA que responde dúvidas e gera relatórios instantâneos  
-  > 
-  > ⏳ Pare de apagar incêndios no fim do mês.
-  > 👉 Clique em *Saiba Mais* e faça um teste gratuito de 14 dias sem cartão de crédito!
-- **Título do Anúncio (Headline):** O software de RH tudo-em-um mais amado pelas PMEs.
-- **Botão CTA:** Experimente Grátis
+> **"Diga adeus às folhas de cálculo e ao receio das auditorias da ACT. O NexusLT é a sua gestão de colaboradores e conformidade laboral num só clique."**
 
-### Variação B (Foco em IA & Inovação)
-- **Formato:** Vídeo curto / Reels (1080x1920)
-- **Texto Principal (Copy):**
-  > E se o seu RH tivesse um assistente com Inteligência Artificial para analisar horas extras, sugerir feedbacks e redigir vagas em segundos? 🤖✨
-  > 
-  > Conheça o **NexuHR AI**: a nova geração de gestão de pessoas que reduz até 70% das rotinas operacionais.
-  > 
-  > Experimente o futuro do RH hoje mesmo.
-- **Título do Anúncio:** Reduza 70% da burocracia do DP com IA
-- **Botão CTA:** Agendar Demonstração
+### Ângulos de Abordagem:
+1. **Conformidade Legal & Segurança perante a ACT**: Foco no registo diário de assiduidade exigido pelo Artigo 202.º do Código do Trabalho e mapa de férias sem erros.
+2. **Tempo & Produtividade**: Fim dos papéis e trocas infindáveis de e-mails para pedir férias ou justificar faltas.
+3. **Solução Tecnológica Europeia com ADN Local**: Software desenvolvido no Porto, com suporte ágil e em português.
 
 ---
 
-## 3. 💼 Anúncios para LinkedIn Ads (B2B / Decisores)
+## 2. Anúncios para Redes Sociais (LinkedIn Ads & Meta Ads)
 
-- **Público:** Heads de RH, Gerentes de Departamento Pessoal, CFOs e CEOs de empresas de 15 a 300 funcionários.
-- **Texto do Anúncio:**
-  > **Líderes de RH não deveriam ser burocratas de planilhas.**
-  > 
-  > Em empresas de alto crescimento, a descentralização de informações de DP custa caro: perda de prazos de férias, inconsistências em folhas de pagamento e desgaste no clima organizacional.
-  > 
-  > O **NexuHR** é a plataforma All-in-One que unifica controle de ponto, gestão de férias, recrutamento (ATS) e assinatura digital em um ambiente seguro e em total conformidade com a legislação.
-  > 
-  > Empresas que migraram para o NexuHR economizam em média **28 horas mensais por gestor** e aumentaram o índice de satisfação interna em 42%.
-  > 
-  > 📊 Descubra quanto sua empresa pode economizar na nossa calculadora de ROI.
-- **Título:** Gestão de Pessoas Inteligente para Empresas em Crescimento
-- **Botão CTA:** Solicitar Demonstração VIP
-
----
-
-## 4. 🔍 Campanhas de Busca (Google Ads)
-
-### Grupo de Anúncios 1: Termos de Categoria (Software de RH / Gestão de Pessoas)
-- **Headlines (Máx 30 caracteres cada):**
-  - `Software de RH Tudo em Um`
-  - `Controle de Ponto e Férias`
-  - `NexuHR: Gestão de Pessoas`
-  - `Automatize seu DP Hoje`
-  - `Teste Grátis por 14 Dias`
-  - `Plataforma de RH com IA`
-- **Descrições (Máx 90 caracteres cada):**
-  - `Centralize ponto, férias, recrutamento e documentos em um só lugar. Teste sem compromisso!`
-  - `Reduza 70% do tempo gasto em planilhas manuais. A plataforma de RH nº 1 para PMEs modernas.`
-  - `Assinatura digital, espelho de ponto automático e portal do colaborador. Conheça o NexuHR.`
+### Peça 1: Foco em Legislação & Inspeções da ACT (LinkedIn Sponsored Content)
+- **Título**: O registo de assiduidade da sua empresa está em conformidade com o Código do Trabalho?
+- **Texto Principal**:
+  "Em Portugal, a gestão de tempos de trabalho e férias não pode ficar dependente de ficheiros de Excel frágeis.
+  Com o **NexusLT**, os seus colaboradores picam o ponto através do telemóvel ou computador com geovalidação, e a sua empresa obtém relatórios prontos para qualquer inspeção da ACT.
+  
+  ✅ Registo diário de assiduidade 100% legal
+  ✅ Aprovação instantânea de férias e ausências
+  ✅ Gestão documental e recrutamento num único painel
+  
+  Sediados no Porto, ajudamos PMEs em todo o país a poupar mais de 15 horas semanais em processos burocráticos.
+  
+  Experimente 14 dias grátis, sem necessidade de cartão de crédito."
+- **CTA**: Começar Teste Gratuito
+- **Destino**: `https://nexuslt.com/register`
 
 ---
 
-## 5. 📧 Sequência de E-mails de Nutrição & Onboarding
-
-### E-mail 1: Boas-Vindas & Acesso Instantâneo (Enviado após o cadastro do Trial)
-- **Assunto:** 🎉 Bem-vindo(a) ao NexuHR: Seus 14 dias de RH sem atritos começam agora!
-- **Corpo:**
-  > Olá, **[Primeiro_Nome]**!
-  > 
-  > Parabéns por dar o primeiro passo para transformar a gestão de pessoas da sua empresa.
-  > 
-  > A partir de hoje, você não precisa mais se preocupar com planilhas perdidas, cálculos manuais de ponto ou assinaturas físicas de papel.
-  > 
-  > 🚀 **Seu acesso ao ambiente de teste está liberado:**
-  > 👉 [Acessar meu Painel NexuHR](https://nexuhr.com/app)
-  > 
-  > **3 coisas rápidas para você testar hoje em menos de 5 minutos:**
-  > 1. Cadastrar seu primeiro colaborador ou importar sua equipe via planilha.
-  > 2. Fazer uma simulação de registro de ponto digital.
-  > 3. Fazer uma pergunta para o nosso **Nexu AI Copilot** no painel lateral.
-  > 
-  > Se precisar de ajuda para configurar, basta responder a este e-mail.
-  > 
-  > Abraços,  
-  > **Equipe NexuHR**
-
-### E-mail 2: O Fim do Pesadelo das Férias e Ponto (Enviado no Dia 3)
-- **Assunto:** ⏱️ Como economizar 6 horas nesta semana na gestão de ponto e férias
-- **Corpo:**
-  > Olá, **[Primeiro_Nome]**,
-  > 
-  > Sabia que a conferência manual de cartões de ponto e o controle de férias no Excel consom até 15% da jornada de um profissional de RH?
-  > 
-  > No NexuHR, seu colaborador solicita férias pelo celular, você aprova com um único clique e o sistema calcula automaticamente o saldo restante e avisa a equipe para evitar choque de datas.
-  > 
-  > 👉 [Ver como funciona a Gestão de Férias no NexuHR](https://nexuhr.com/app#ferias)
-  > 
-  > Quer ver uma demonstração ao vivo adaptada ao tamanho da sua equipe?
-  > [Clique aqui para agendar 15 minutos com nossos especialistas].
+### Peça 2: Foco em Eficiência e Custos (Apenas a partir de 4 €/mês)
+- **Título**: Por apenas 4 € por colaborador, revolucione a gestão LT da sua organização.
+- **Texto Principal**:
+  "Software de gestão de pessoas pesado e dispendioso? Isso é coisa do passado.
+  O **NexusLT** foi concebido para o tecido empresarial português: intuitivo, veloz e pronto a usar em 5 minutos.
+  
+  Conecte a sua equipa, acompanhe a assiduidade em tempo real e agilize o processamento salarial com IA integrada.
+  
+  Descubra o plano ideal para a sua empresa a partir de 4 €/mês."
+- **CTA**: Ver Demonstração Interativa
 
 ---
 
-## 6. 🎬 Roteiro para Vídeo Institucional / VSL (60 Segundos)
+## 3. Campanhas de Pesquisa (Google Ads)
 
-- **[00-10s] Gancho Visual:** Imagem acelerada de uma tela cheia de planilhas desorganizadas, post-its na mesa e um gestor estressado.
-  - *Locução:* *"Se você trabalha com RH ou lidera uma empresa, você conhece essa sensação: dezenas de planilhas, horas extras para calcular e a sensação de que o dia não tem horas suficientes."*
-- **[10-25s] Apresentação da Solução:** Transição suave para a interface limpa e moderna do NexuHR no desktop e mobile.
-  - *Locução:* *"Chegou o NexuHR. A plataforma tudo-em-um que simplifica toda a rotina do Departamento Pessoal em um único clique."*
-- **[25-45s] Demonstração Rápida de Recursos:** Cortes dinâmicos mostrando ponto eletrônico com 1 toque, calendário de férias interativo e o robô de IA respondendo relatórios.
-  - *Locução:* *"Ponto digital sem atritos, gestão de férias automática, recrutamento visual e uma Inteligência Artificial pronta para responder qualquer dúvida da sua equipe."*
-- **[45-60s] Chamada para Ação:** Logo NexuHR brilhando na tela com as cores oficiais.
-  - *Locução:* *"Menos burocracia, mais tempo para pessoas. Acesse nexuhr.com e comece seu teste gratuito de 14 dias hoje mesmo."*
+### Grupo de Anúncios 1: Software de Assiduidade e Ponto Portugal
+- **Título 1 (30 car.)**: Software de Assiduidade ACT
+- **Título 2 (30 car.)**: NexusLT - Feito no Porto
+- **Título 3 (30 car.)**: Registo de Ponto Legal
+- **Descrição 1 (90 car.)**: Cumpra o Art. 202 do Código do Trabalho. Picagem de ponto móvel com relatórios ACT.
+- **Descrição 2 (90 car.)**: Teste 14 dias grátis a partir de 4€/mês. Centralize férias, equipa e documentos.
+
+### Grupo de Anúncios 2: Gestão LT e Pessoal
+- **Título 1 (30 car.)**: Plataforma de Gestão LT
+- **Título 2 (30 car.)**: Software All-in-One em PT
+- **Título 3 (30 car.)**: Adeus Folhas de Excel
+- **Descrição 1 (90 car.)**: Centralize férias, ausências e recrutamento na sua empresa com a plataforma NexusLT.
+- **Descrição 2 (90 car.)**: Experimente sem compromisso. Suporte direto e especializado sediado no Porto.
+
+---
+
+## 4. Sequência de E-mails de Aquisição e Nutrição (PT-PT)
+
+### E-mail 1: Boas-vindas ao Teste Gratuito
+**Assunto:** Bem-vindo ao NexusLT: A sua gestão LT começa aqui!  
+**Corpo:**  
+"Olá {{nome}},  
+Seja muito bem-vindo ao NexusLT!
+
+A partir de agora, a sua organização dá um passo decisivo rumo à modernização e à total conformidade com o Código do Trabalho português.
+
+Nos próximos 14 dias terá acesso irrestrito a:
+• Registo de assiduidade com validação em tempo real
+• Gestão centralizada do mapa de férias da sua equipa
+• Arquivo digital de contratos e recibos de vencimento
+• O nosso Assistente com IA Copilot para esclarecer dúvidas de gestão
+
+Se tiver alguma dúvida, a nossa equipa no Porto está à sua inteira disposição para o apoiar.
+
+[Aceder ao Meu Painel NexusLT]
+
+Com os melhores cumprimentos,  
+Equipa NexusLT Porto"

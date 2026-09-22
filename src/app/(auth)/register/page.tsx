@@ -27,7 +27,7 @@ export default function RegisterPage() {
 
     try {
       const supabase = createClient();
-      const { data, error: signUpError } = await supabase.auth.signUp({
+      const { error: signUpError } = await supabase.auth.signUp({
         email,
         password,
         options: {
@@ -68,11 +68,14 @@ export default function RegisterPage() {
               <Layers className="w-6 h-6" />
             </div>
             <span className="font-heading font-extrabold text-2xl tracking-tight text-nexu-dark">
-              Nexu<span className="text-nexu-coral">HR</span>
+              Nexus<span className="text-nexu-coral">LT</span>
             </span>
           </Link>
+          <div className="inline-block mt-2 px-2.5 py-0.5 rounded-full bg-slate-100 text-[11px] font-semibold text-slate-600">
+            Porto, Portugal 🇵🇹
+          </div>
           <h2 className="mt-3 font-heading font-bold text-xl text-slate-900">
-            Crie sua Conta de Teste Grátis
+            Crie a sua Conta de Teste Gratuita
           </h2>
           <p className="text-xs text-slate-500 mt-1">
             14 dias de acesso completo sem necessidade de cartão de crédito.
@@ -89,7 +92,7 @@ export default function RegisterPage() {
         {success && (
           <div className="mb-5 p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-xs text-emerald-800 flex items-center gap-2">
             <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-600" />
-            <span>Conta criada com sucesso! Redirecionando para o painel...</span>
+            <span>Conta criada com sucesso! A redirecionar para o painel...</span>
           </div>
         )}
 
@@ -103,14 +106,14 @@ export default function RegisterPage() {
                 required
                 value={orgName}
                 onChange={(e) => setOrgName(e.target.value)}
-                placeholder="Ex: Vortex Tech Soluções"
+                placeholder="Ex: Douro Inovação Lda."
                 className="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nexu-coral bg-slate-50 focus:bg-white text-xs"
               />
             </div>
           </div>
 
           <div>
-            <label className="block font-semibold text-slate-700 mb-1.5">Seu Nome Completo</label>
+            <label className="block font-semibold text-slate-700 mb-1.5">O seu Nome Completo</label>
             <div className="relative">
               <User className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
               <input
@@ -118,7 +121,7 @@ export default function RegisterPage() {
                 required
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
-                placeholder="Ex: Mariana Silva"
+                placeholder="Ex: Mariana Santos"
                 className="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nexu-coral bg-slate-50 focus:bg-white text-xs"
               />
             </div>
@@ -134,14 +137,14 @@ export default function RegisterPage() {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="mariana@empresa.com"
+                  placeholder="mariana@empresa.pt"
                   className="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nexu-coral bg-slate-50 focus:bg-white text-xs"
                 />
               </div>
             </div>
 
             <div>
-              <label className="block font-semibold text-slate-700 mb-1.5">Nº de Colaboradores</label>
+              <label className="block font-semibold text-slate-700 mb-1.5">N.º de Colaboradores</label>
               <select
                 value={employeeRange}
                 onChange={(e) => setEmployeeRange(e.target.value)}
@@ -156,7 +159,7 @@ export default function RegisterPage() {
           </div>
 
           <div>
-            <label className="block font-semibold text-slate-700 mb-1.5">Criar Senha de Acesso</label>
+            <label className="block font-semibold text-slate-700 mb-1.5">Criar Palavra-passe</label>
             <div className="relative">
               <Lock className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
               <input
@@ -165,7 +168,7 @@ export default function RegisterPage() {
                 minLength={6}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                placeholder="Mínimo 6 caracteres"
+                placeholder="Mínimo de 6 carateres"
                 className="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nexu-coral bg-slate-50 focus:bg-white text-xs"
               />
             </div>
@@ -176,7 +179,7 @@ export default function RegisterPage() {
             disabled={loading}
             className="w-full py-3.5 bg-nexu-coral hover:bg-nexu-coralDark text-white font-bold rounded-xl text-xs transition-all shadow-md flex items-center justify-center gap-2 disabled:opacity-50 mt-2"
           >
-            <span>{loading ? 'Criando sua Organização...' : 'Liberar Meu Acesso Grátis'}</span>
+            <span>{loading ? 'A criar a sua Organização...' : 'Iniciar Teste Gratuito de 14 Dias'}</span>
             <ArrowRight className="w-4 h-4" />
           </button>
         </form>
@@ -184,7 +187,7 @@ export default function RegisterPage() {
         <div className="mt-6 text-center text-xs text-slate-500">
           Já tem uma conta?{' '}
           <Link href="/login" className="text-nexu-coral font-bold hover:underline">
-            Fazer login
+            Iniciar sessão
           </Link>
         </div>
       </div>

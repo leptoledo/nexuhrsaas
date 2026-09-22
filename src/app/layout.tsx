@@ -16,24 +16,25 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "NexuHR | A Plataforma Tudo-em-Um de RH Inteligente e DP",
+  title: "NexusLT | A Plataforma All-in-One de Gestão LT e Pessoas em Portugal",
   description:
-    "Automatize ponto eletrônico, férias, recrutamento, documentos e gestão de pessoas com IA. O SaaS All-in-One de RH escalável pronto para equipes modernas.",
+    "Automatize o registo de assiduidade, mapa de férias, recrutamento, documentos e gestão de colaboradores com IA. 100% em conformidade com o Código do Trabalho e a ACT. Sediado no Porto.",
   keywords: [
-    "Software de RH",
-    "Ponto Eletrônico Portaria 671",
-    "Gestão de Férias",
+    "Software LT",
+    "Gestão LT Portugal",
+    "Registo de Assiduidade ACT",
+    "Código do Trabalho",
+    "Mapa de Férias",
     "Recrutamento ATS",
-    "Assinatura Digital",
-    "NexuHR",
-    "Factorial HR alternativo",
+    "Recibos de Vencimento",
+    "NexusLT Porto",
   ],
   openGraph: {
-    title: "NexuHR | A Plataforma Tudo-em-Um de RH Inteligente e DP",
+    title: "NexusLT | A Plataforma All-in-One de Gestão LT e Pessoas em Portugal",
     description:
-      "Centralize DP, Ponto, Férias e Talentos em um único software moderno com IA.",
+      "Centralize a gestão da sua equipa, controlo horário conforme a ACT e processos laborais num único software moderno com IA.",
     type: "website",
-    locale: "pt_BR",
+    locale: "pt_PT",
   },
 };
 
@@ -43,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={`${inter.variable} ${plusJakartaSans.variable} scroll-smooth`}>
+    <html lang="pt-PT" className={`${inter.variable} ${plusJakartaSans.variable} scroll-smooth`}>
       <body className="antialiased min-h-screen bg-nexu-bgLight text-nexu-dark selection:bg-nexu-coral selection:text-white">
         {children}
       </body>

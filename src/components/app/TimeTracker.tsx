@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { MapPin, LogIn, Coffee, RotateCcw, LogOut, CheckCircle2 } from 'lucide-react';
+import { MapPin, LogIn, Coffee, RotateCcw, LogOut } from 'lucide-react';
 import { PunchType } from '@/lib/types/database.types';
 
 interface TimeTrackerProps {
@@ -15,9 +15,9 @@ export function TimeTracker({ onPunch }: TimeTrackerProps) {
   useEffect(() => {
     const updateTime = () => {
       const now = new Date();
-      setTimeStr(now.toLocaleTimeString('pt-BR'));
+      setTimeStr(now.toLocaleTimeString('pt-PT'));
       setDateStr(
-        now.toLocaleDateString('pt-BR', {
+        now.toLocaleDateString('pt-PT', {
           weekday: 'long',
           day: '2-digit',
           month: 'long',
@@ -34,7 +34,7 @@ export function TimeTracker({ onPunch }: TimeTrackerProps) {
     <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl p-6 sm:p-8 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
       <div className="text-center md:text-left">
         <div className="text-xs font-semibold text-nexu-coral uppercase tracking-widest">
-          Ponto Digital Portaria 671 MTE
+          Registo de Assiduidade • Código do Trabalho (Art.º 202.º ACT)
         </div>
         <div className="text-4xl sm:text-5xl font-mono font-extrabold text-white mt-1">
           {timeStr || '12:00:00'}
@@ -44,7 +44,7 @@ export function TimeTracker({ onPunch }: TimeTrackerProps) {
         </div>
         <div className="text-xs text-slate-400 mt-2 flex items-center justify-center md:justify-start gap-1.5">
           <MapPin className="w-3.5 h-3.5 text-emerald-400" />
-          <span>Localização: São Paulo, Brasil (GPS Validado)</span>
+          <span>Localização: Porto, Portugal (Geovalidação ACT)</span>
         </div>
       </div>
 
@@ -58,19 +58,19 @@ export function TimeTracker({ onPunch }: TimeTrackerProps) {
         </button>
 
         <button
-          onClick={() => onPunch('break_start', '2. Almoço')}
+          onClick={() => onPunch('break_start', '2. Pausa Almoço')}
           className="px-5 py-3 rounded-xl bg-amber-600 hover:bg-amber-500 font-bold text-xs transition-colors shadow flex items-center justify-center gap-2"
         >
           <Coffee className="w-4 h-4" />
-          <span>2. Almoço</span>
+          <span>2. Pausa Almoço</span>
         </button>
 
         <button
-          onClick={() => onPunch('break_end', '3. Retorno')}
+          onClick={() => onPunch('break_end', '3. Regresso')}
           className="px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 font-bold text-xs transition-colors shadow flex items-center justify-center gap-2"
         >
           <RotateCcw className="w-4 h-4" />
-          <span>3. Retorno</span>
+          <span>3. Regresso</span>
         </button>
 
         <button

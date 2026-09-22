@@ -20,10 +20,10 @@ export function DocumentList({
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
           <h2 className="font-heading font-extrabold text-2xl text-slate-900">
-            Documentos & Assinatura Digital
+            Documentos & Recibos de Vencimento
           </h2>
           <p className="text-xs text-slate-500 mt-1">
-            Holerites, contratos de trabalho e termos com assinatura eletrônica de validade jurídica.
+            Recibos de vencimento, contratos de trabalho e adendas com assinatura digital certificada (Regulamento eIDAS).
           </p>
         </div>
         <button
@@ -31,7 +31,7 @@ export function DocumentList({
           className="px-4 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold transition-all shadow-md flex items-center gap-2"
         >
           <Send className="w-4 h-4" />
-          <span>Solicitar Assinatura</span>
+          <span>Solicitar Assinatura Digital</span>
         </button>
       </div>
 
@@ -42,8 +42,8 @@ export function DocumentList({
               <tr>
                 <th className="py-3.5 px-4">Nome do Documento</th>
                 <th className="py-3.5 px-4">Destinatário</th>
-                <th className="py-3.5 px-4">Data Envio</th>
-                <th className="py-3.5 px-4">Status</th>
+                <th className="py-3.5 px-4">Data de Envio</th>
+                <th className="py-3.5 px-4">Estado</th>
                 <th className="py-3.5 px-4 text-right">Ações</th>
               </tr>
             </thead>
@@ -58,7 +58,7 @@ export function DocumentList({
                     {doc.employee_name || 'Geral'}
                   </td>
                   <td className="py-3.5 px-4 text-slate-500">
-                    {new Date(doc.created_at).toLocaleDateString('pt-BR')}
+                    {new Date(doc.created_at).toLocaleDateString('pt-PT')}
                   </td>
                   <td className="py-3.5 px-4">
                     {doc.status === 'signed' ? (
@@ -67,7 +67,7 @@ export function DocumentList({
                       </span>
                     ) : (
                       <span className="bg-amber-100 text-amber-800 text-[10px] font-bold px-2 py-0.5 rounded-full">
-                        Aguardando Assinatura
+                        A aguardar Assinatura
                       </span>
                     )}
                   </td>
@@ -77,7 +77,7 @@ export function DocumentList({
                       className="text-nexu-coral font-bold hover:underline inline-flex items-center gap-1"
                     >
                       <Download className="w-3.5 h-3.5" />
-                      <span>Download</span>
+                      <span>Descarregar</span>
                     </button>
                   </td>
                 </tr>

@@ -1,11 +1,12 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Building2, Shield, CreditCard, Key, CheckCircle2, Save } from 'lucide-react';
+import { Building2, CreditCard, Key, CheckCircle2, Save } from 'lucide-react';
 
 export default function ConfiguracoesPage() {
-  const [orgName, setOrgName] = useState('Vortex Tech Soluções');
-  const [cnpj, setCnpj] = useState('12.345.678/0001-90');
+  const [orgName, setOrgName] = useState('Vortex Tech Soluções Lda.');
+  const [nipc, setNipc] = useState('509876543');
+  const [city, setCity] = useState('Porto, Portugal');
   const [selectedPlan, setSelectedPlan] = useState<'starter' | 'growth' | 'enterprise'>('growth');
   const [toastMsg, setToastMsg] = useState<string | null>(null);
 
@@ -16,7 +17,7 @@ export default function ConfiguracoesPage() {
 
   const handleSave = (e: React.FormEvent) => {
     e.preventDefault();
-    showToast('Configurações salvas com sucesso no banco de dados!');
+    showToast('Configurações guardadas com sucesso na base de dados!');
   };
 
   return (
@@ -26,7 +27,7 @@ export default function ConfiguracoesPage() {
           Configurações da Organização & Plano SaaS
         </h2>
         <p className="text-xs text-slate-500 mt-1">
-          Gerencie os dados cadastrais da sua empresa, faturamento, chaves de API e segurança.
+          Efetue a gestão dos dados cadastrais da empresa em Portugal, faturação em Euros, chaves de API e segurança.
         </p>
       </div>
 
@@ -35,12 +36,12 @@ export default function ConfiguracoesPage() {
         <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4 text-xs">
           <div className="flex items-center gap-2 pb-3 border-b border-slate-100 font-bold text-sm text-slate-800">
             <Building2 className="w-4 h-4 text-nexu-coral" />
-            <span>Dados Corporativos (Tenant)</span>
+            <span>Dados da Entidade Patronal (Portugal)</span>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div>
-              <label className="block font-semibold text-slate-700 mb-1">Nome da Empresa</label>
+              <label className="block font-semibold text-slate-700 mb-1">Denominação Social</label>
               <input
                 type="text"
                 value={orgName}
@@ -49,11 +50,21 @@ export default function ConfiguracoesPage() {
               />
             </div>
             <div>
-              <label className="block font-semibold text-slate-700 mb-1">CNPJ</label>
+              <label className="block font-semibold text-slate-700 mb-1">NIPC / NIF da Empresa</label>
               <input
                 type="text"
-                value={cnpj}
-                onChange={(e) => setCnpj(e.target.value)}
+                value={nipc}
+                onChange={(e) => setNipc(e.target.value)}
+                maxLength={9}
+                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nexu-coral text-xs font-mono"
+              />
+            </div>
+            <div>
+              <label className="block font-semibold text-slate-700 mb-1">Sede / Concelho</label>
+              <input
+                type="text"
+                value={city}
+                onChange={(e) => setCity(e.target.value)}
                 className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nexu-coral text-xs"
               />
             </div>
@@ -64,7 +75,7 @@ export default function ConfiguracoesPage() {
         <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4 text-xs">
           <div className="flex items-center gap-2 pb-3 border-b border-slate-100 font-bold text-sm text-slate-800">
             <CreditCard className="w-4 h-4 text-nexu-indigo" />
-            <span>Plano de Assinatura NexuHR</span>
+            <span>Plano de Subscrição NexusLT (€)</span>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -77,8 +88,8 @@ export default function ConfiguracoesPage() {
               }`}
             >
               <div className="font-bold text-sm text-slate-900">Starter</div>
-              <div className="text-xs text-slate-500 mt-0.5">R$ 14 / colab / mês</div>
-              <div className="text-[11px] text-slate-600 mt-2">Até 20 colaboradores, ponto e férias</div>
+              <div className="text-xs text-slate-500 mt-0.5">4 € / colab / mês</div>
+              <div className="text-[11px] text-slate-600 mt-2">Até 20 colaboradores, assiduidade e mapa de férias ACT</div>
             </div>
 
             <div
@@ -92,9 +103,9 @@ export default function ConfiguracoesPage() {
               <span className="absolute -top-2.5 right-3 bg-nexu-coral text-white text-[9px] font-bold px-2 py-0.5 rounded-full">
                 ATIVO
               </span>
-              <div className="font-bold text-sm text-slate-900">Growth & Pro</div>
-              <div className="text-xs text-slate-500 mt-0.5">R$ 24 / colab / mês</div>
-              <div className="text-[11px] text-slate-600 mt-2">Ilimitado com IA e ATS Kanban</div>
+              <div className="font-bold text-sm text-slate-900">Profissional (Pro)</div>
+              <div className="text-xs text-slate-500 mt-0.5">7 € / colab / mês</div>
+              <div className="text-[11px] text-slate-600 mt-2">Ilimitado com IA Copilot, ATS e recibos de vencimento</div>
             </div>
 
             <div
@@ -105,9 +116,9 @@ export default function ConfiguracoesPage() {
                   : 'border-slate-200 hover:border-slate-300'
               }`}
             >
-              <div className="font-bold text-sm text-slate-900">Enterprise</div>
-              <div className="text-xs text-slate-500 mt-0.5">Sob Medida</div>
-              <div className="text-[11px] text-slate-600 mt-2">SLA 99.9%, SSO SAML e API dedicada</div>
+              <div className="font-bold text-sm text-slate-900">Empresarial</div>
+              <div className="text-xs text-slate-500 mt-0.5">11 € / colab / mês</div>
+              <div className="text-[11px] text-slate-600 mt-2">Múltiplos NIFs, SLA 99.9%, gestor dedicado no Porto</div>
             </div>
           </div>
         </div>
@@ -120,7 +131,7 @@ export default function ConfiguracoesPage() {
           </div>
 
           <div>
-            <label className="block font-semibold text-slate-700 mb-1">API Key da Organização (Bearer)</label>
+            <label className="block font-semibold text-slate-700 mb-1">API Key da Organização (Bearer Token)</label>
             <div className="flex items-center gap-2">
               <input
                 type="password"
@@ -145,7 +156,7 @@ export default function ConfiguracoesPage() {
             className="px-6 py-3 bg-nexu-coral hover:bg-nexu-coralDark text-white font-bold rounded-xl text-xs transition-all shadow-md flex items-center gap-2"
           >
             <Save className="w-4 h-4" />
-            <span>Salvar Alterações</span>
+            <span>Guardar Alterações</span>
           </button>
         </div>
       </form>

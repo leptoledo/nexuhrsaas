@@ -6,9 +6,9 @@ import Link from 'next/link';
 export function RoiCalculator() {
   const [employeeCount, setEmployeeCount] = useState<number>(50);
 
-  // Math: 0.8 hours saved per employee / month, R$ 60 avg hourly cost
-  const hoursSaved = Math.round(employeeCount * 0.8);
-  const moneySaved = Math.round(hoursSaved * 60 * 12);
+  // Média: 0.9 horas poupadas por colaborador/mês em tarefas burocráticas, custo médio de 16 €/hora em Portugal
+  const hoursSaved = Math.round(employeeCount * 0.9);
+  const moneySaved = Math.round(hoursSaved * 16 * 12);
 
   return (
     <section id="calculadora" className="py-20 md:py-28 bg-gradient-to-b from-slate-900 to-slate-950 text-white relative overflow-hidden">
@@ -18,10 +18,10 @@ export function RoiCalculator() {
             Calculadora de Impacto
           </span>
           <h2 className="mt-4 font-heading font-extrabold text-3xl sm:text-4xl text-white tracking-tight">
-            Calcule quanto tempo e dinheiro sua empresa economizará
+            Calcule quanto tempo e dinheiro a sua empresa irá poupar
           </h2>
           <p className="mt-3 text-slate-400 text-sm sm:text-base">
-            Mova a barra abaixo com a quantidade de colaboradores para ver o ROI imediato.
+            Ajuste a barra abaixo com o número de colaboradores para calcular o retorno sobre o investimento imediato.
           </p>
         </div>
 
@@ -30,7 +30,7 @@ export function RoiCalculator() {
           <div className="space-y-4">
             <div className="flex items-center justify-between">
               <label htmlFor="empSlider" className="text-sm sm:text-base font-semibold text-slate-200">
-                Quantidade de Colaboradores:
+                Número de Colaboradores:
               </label>
               <span className="text-2xl font-bold font-heading text-nexu-coral">
                 {employeeCount}
@@ -56,23 +56,23 @@ export function RoiCalculator() {
           {/* Stats Grid */}
           <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div className="bg-slate-900/80 p-5 rounded-2xl border border-slate-700">
-              <div className="text-xs text-slate-400 font-medium">Horas Economizadas / Mês</div>
+              <div className="text-xs text-slate-400 font-medium">Horas Poupadas / Mês</div>
               <div className="mt-2 text-3xl font-extrabold font-heading text-white">{hoursSaved}h</div>
-              <div className="mt-1 text-xs text-emerald-400">Tempo livre para RH estratégico</div>
+              <div className="mt-1 text-xs text-emerald-400">Tempo libertado para Gestão LT estratégica</div>
             </div>
 
             <div className="bg-slate-900/80 p-5 rounded-2xl border border-slate-700">
-              <div className="text-xs text-slate-400 font-medium">Economia Estimada / Ano</div>
+              <div className="text-xs text-slate-400 font-medium">Poupança Estimada / Ano</div>
               <div className="mt-2 text-3xl font-extrabold font-heading text-emerald-400">
-                R$ {moneySaved.toLocaleString('pt-BR')}
+                {moneySaved.toLocaleString('pt-PT')} €
               </div>
-              <div className="mt-1 text-xs text-slate-400">Redução de custos operacionais</div>
+              <div className="mt-1 text-xs text-slate-400">Redução de custos operacionais diretos</div>
             </div>
 
             <div className="bg-slate-900/80 p-5 rounded-2xl border border-slate-700">
               <div className="text-xs text-slate-400 font-medium">Velocidade de Processos</div>
-              <div className="mt-2 text-3xl font-extrabold font-heading text-nexu-coral">4.8x</div>
-              <div className="mt-1 text-xs text-slate-400">Mais rápido que planilhas</div>
+              <div className="mt-2 text-3xl font-extrabold font-heading text-nexu-coral">5x</div>
+              <div className="mt-1 text-xs text-slate-400">Mais rápido do que folhas de cálculo</div>
             </div>
           </div>
 
@@ -81,7 +81,7 @@ export function RoiCalculator() {
               href="/register"
               className="inline-block px-8 py-3.5 rounded-xl bg-nexu-coral hover:bg-nexu-coralDark text-white font-semibold text-sm transition-all shadow-lg hover:shadow-nexu-coral/30"
             >
-              Quero Economizar Agora na Minha Empresa &rarr;
+              Quero Poupar Agora na Minha Empresa &rarr;
             </Link>
           </div>
         </div>

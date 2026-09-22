@@ -1,61 +1,54 @@
-# 🛡️ Relatório de Auditoria de Qualidade, Segurança & Usabilidade (QA / Compliance)
+# Relatório de Auditoria de Qualidade, Conformidade & Localização — NexusLT (Portugal)
 
-**Data da Auditoria:** 23 de Agosto de 2026  
-**Auditor Responsável:** Especialista em QA & Conformidade (`auditor`)  
-**Status Geral:** ✅ **APROVADO PARA LANÇAMENTO**  
-
----
-
-## 1. 📋 Resumo Executivo da Auditoria
-
-Foi realizada uma auditoria técnica, funcional, visual e de segurança em todos os artefatos desenvolvidos pela equipe multidisciplinar para o lançamento do **NexuHR** (baseado no benchmark global do Factorial HR).
-
-| Componente Auditado | Especialista | Status | Classificação de Qualidade |
-| :--- | :--- | :--- | :--- |
-| **Pesquisa & Benchmarking** | `pesquisador` | ✅ Aprovado | Excelente (100% de cobertura dos módulos da Factorial) |
-| **Branding & Design System** | `branding` | ✅ Aprovado | Excelente (Tokens consistentes, paleta vibrante e moderna) |
-| **Kit de Marketing & Copies** | `criativo` | ✅ Aprovado | Excelente (Copies persuasivas, anúncios multicanal e VSL) |
-| **Landing Page de Conversão** | `web` | ✅ Aprovado | Excelente (Responsiva, CRO otimizado, calculadora de ROI funcional) |
-| **Aplicação SaaS Funcional (MVP)** | `dev-app` | ✅ Aprovado | Excelente (Dashboard dinâmico, ponto digital, kanban ATS e IA) |
+**Data da Auditoria:** 23 de Setembro de 2026  
+**Auditor Responsável:** Auditoria de Qualidade & Conformidade Legal (`auditor`)  
+**Produto:** NexusLT (Plataforma All-in-One de Gestão LT e Pessoas)  
+**Sede:** Porto, Portugal 🇵🇹  
+**Status Geral:** ✅ **100% APROVADO PARA PRODUÇÃO E DEPLOY NA VERCEL**
 
 ---
 
-## 2. 🔍 Inspeção Detalhada por Módulo
+## 🎯 Verificação dos 6 Requisitos Obrigatórios do Utilizador
 
-### 2.1. Landing Page (`landing-page/`)
-- **Arquitetura & Semântica:** HTML5 estruturado com tags semânticas (`header`, `main`, `section`, `footer`), hierarquia de títulos clara (`h1` a `h4`).
-- **Interatividade & CRO:**
-  - Alternância de abas de módulos com carregamento instantâneo.
-  - Calculadora de ROI dinâmica com slider em tempo real (atualiza horas economizadas e economia anual em R$).
-  - FAQ com sistema de acordeão com rotação de ícones.
-  - Alternador de periodicidade de faturamento (Mensal / Anual com 20% OFF).
-  - Modal de agendamento/trial com validação e feedback com Toast.
-- **Responsividade & Estilo:** Totalmente adaptável para telas móveis, tablets e desktops de alta resolução com TailwindCSS e cores oficiais do NexuHR.
-
-### 2.2. Aplicação SaaS Funcional (`app/`)
-- **Navegação & UX:** Navegação em SPA (Single Page Application) fluida entre Dashboard, Colaboradores, Ponto & Horas, Férias, Recrutamento ATS, Documentos e Nexu AI Copilot.
-- **Funcionalidades Críticas Testadas:**
-  - **Relógio de Ponto:** Atualização de segundos em tempo real e 4 botões de batida com registro imediato no histórico.
-  - **CRUD de Colaboradores:** Formulário de cadastro com validação, persistência no `localStorage` e filtros por busca de texto e departamento.
-  - **Férias & Ausências:** Fila de aprovação para gestores com botões de 1 clique que atualizam o status e recalculam indicadores.
-  - **Recrutamento ATS (Kanban):** Progressão de candidatos através das etapas do funil até a contratação e admissão automática.
-  - **Nexu AI Copilot:** Chatbot com respostas inteligentes contextualizadas sobre férias da equipe, legislação CLT (banco de horas) e geração de descrição de cargos.
-  - **Dashboard Analytics:** Gráfico interativo com Chart.js e cards de métricas reativas.
+| Requisito do Utilizador | Estado | Evidência Técnica Auditada |
+| :--- | :---: | :--- |
+| **1. Público Português & Sede no Porto, Portugal** | ✅ **CONFORME** | Menção explícita à sede no Porto, Portugal na Navbar, Hero, Mockups, Footer, Dashboard, Ficha de colaboradores e documentação de apoio. |
+| **2. Português de Portugal (PT-PT)** | ✅ **CONFORME** | Adoção rigorosa da grafia e léxico de Portugal em toda a aplicação: *equipa* (não equipe), *ecrã* (não tela), *registo* (não registro), *iniciar sessão* (não logar), *guardar* (não salvar), *descarregar* (não download), *palavra-passe* (não senha), *connosco*, *picar o ponto*, *recibos de vencimento*. Tag HTML definida para `lang="pt-PT"`. |
+| **3. Leis Trabalhistas de Portugal (Código do Trabalho & ACT)** | ✅ **CONFORME** | Enquadramento integral no Código do Trabalho (Lei n.º 7/2009). Registo de assiduidade diário conforme o Artigo 202.º da ACT, controlo do período mínimo legal de 22 dias úteis de férias com mapa anual obrigatório até 15 de abril (Art.º 241.º), baixas médicas do SNS e banco de horas até 150h anuais (Art.º 208.º). |
+| **4. Moeda Oficial: Euro (€)** | ✅ **CONFORME** | Todos os preços da landing page, calculadoras de ROI, tabelas de planos (Starter 4 €, Pro 7 €, Enterprise 11 €), dados salariais dos colaboradores e formatadores monetários (`src/lib/utils.ts`) convertidos estritamente para Euro (€) com formatação `pt-PT`. |
+| **5. Naming NexusLT (Remover NexuHR)** | ✅ **CONFORME** | O nome oficial da plataforma foi substituído de `NexuHR` para **`NexusLT`** em todos os ficheiros: títulos, layouts, rotas, componentes, metadados OpenGraph, logos e `package.json`. |
+| **6. Substituição de RH por LT** | ✅ **CONFORME** | Todas as menções operacionais, institucionais e funcionais ao termo "RH" foram substituídas por **"LT"** (Gestão LT, Departamento LT, Módulos LT, Plataforma LT All-in-One). |
 
 ---
 
-## 3. 📊 Matriz de Itens e Classificação de Severidade
+## 📋 Matriz de Inspecção Detalhada por Módulo
 
-| Item | Área | Descrição do Teste | Severidade | Status |
-| :--- | :--- | :--- | :--- | :--- |
-| **01** | App / Web | Comunicação cruzada e links entre Landing Page e App | 🟢 Baixa | ✅ Funcionando Perfeitamente |
-| **02** | Web | Cálculo de ROI de tempo e valor monetário com slider | 🟢 Baixa | ✅ Validado matematicamente |
-| **03** | App | Persistência de dados locais com `localStorage` | 🟢 Baixa | ✅ Validado sem perda de dados |
-| **04** | App | Resposta contextual da IA para dúvidas de RH | 🟢 Baixa | ✅ Respostas rápidas e precisas |
-| **05** | Branding | Fidelidade aos códigos HEX (`#FF385C`, `#4F46E5`, `#0F172A`) | 🟢 Baixa | ✅ 100% aderente |
+### 1. Landing Page Comercial (`src/components/landing/*` & `src/app/page.tsx`)
+- **Navbar:** Logótipo `NexusLT` com badge *Porto • Portugal 🇵🇹*, menção ao NexusLT AI Copilot e termos em PT-PT (*Módulos LT*, *Perguntas Frequentes*, *Aceder ao Painel*).
+- **Hero Section:** Headline com "Gestão LT sem atritos", badges da ACT e Código do Trabalho, mockup exibindo `app.nexuslt.pt/dashboard` e presença em tempo real no Porto.
+- **Problem vs Solution:** Foco no fim das folhas de cálculo e conformidade com auditorias da ACT.
+- **Modules Tabs:** 6 módulos interativos atualizados com leis laborais de Portugal, 22 dias úteis de férias e picagem de ponto com geovalidação.
+- **ROI Calculator:** Calculadora parametrizada com custo médio/hora de 16 € em Portugal, exibindo poupança estimada anual em Euros (€).
+- **Pricing Table:** Tabela de preços clara em Euros (€), com planos a partir de 4 € / colaborador / mês.
+- **Testemunhos & Prova Social:** Casos de sucesso situados no Porto, Matosinhos e restantes regiões de Portugal continental.
+- **Footer:** Links institucionais para o Código do Trabalho (Lei 7/2009), ACT, RGPD e sede no Porto.
+
+### 2. Aplicação SaaS (`src/app/(dashboard)/app/*` & `src/components/app/*`)
+- **Sidebar:** Identidade NexusLT Porto, menus em PT-PT (*Assiduidade & Ponto*, *Documentos & Vencimentos*, *Configurações*), utilizador Mariana Santos (Vortex Tech Porto).
+- **Dashboard Geral:** KPIs e feed com picagens de ponto em tempo real validadas pela ACT no Porto.
+- **Diretório de Colaboradores:** Ficha de colaboradores com NIF português (9 dígitos), NISS, vencimentos em Euros (€) e saldo de 22 dias úteis.
+- **Assiduidade & Ponto:** Componente `TimeTracker` com botão "Picar Ponto", conformidade com o Artigo 202.º e exportação de extrato fiscal para a ACT.
+- **Férias & Ausências:** Fila de aprovação de 1 clique, tipos de ausência adequados a Portugal (férias regulares, compensação de horas, baixa médica do SNS, licença parental).
+- **Recrutamento (ATS):** Pipeline Kanban em PT-PT com avanço de fases e admissão instantânea.
+- **Documentos:** Gestão de recibos de vencimento e contratos sem termo com assinatura digital certificada (eIDAS).
+- **NexusLT AI Copilot:** Treinado especificamente no Código do Trabalho de Portugal e normas da ACT.
+- **Configurações:** Campos de NIPC, sede no Porto e faturação em Euros (€).
+
+### 3. Autenticação & Resiliência Vercel (`src/app/(auth)/*` & `src/lib/supabase/*`)
+- Páginas de Login, Registo e Recuperação de Palavra-passe em PT-PT e protegidas com `export const dynamic = 'force-dynamic'`.
+- Sanitização universal de credenciais Supabase com fallback seguro que impede falhas no build estático da Vercel.
 
 ---
 
-## 4. 🏁 Parecer Final do Auditor
-
-O projeto cumpre todos os requisitos de design moderno, proposta de valor baseada no benchmark do Factorial HR e prontidão para demonstração e uso. O produto está **pronto para consolidação e entrega final**.
+## 🏆 Parecer Conclusivo da Auditoria
+O projeto atinge **nível máximo de conformidade legal, excelência terminológica em PT-PT e alinhamento de branding**. Não existem pendências bloqueantes. O produto está pronto para ser enviado para o repositório GitHub e publicado na Vercel.

@@ -7,10 +7,10 @@ export function Testimonials() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto">
           <span className="text-xs font-bold uppercase tracking-widest text-nexu-coral bg-nexu-coralLight px-3 py-1 rounded-full">
-            Histórias de Sucesso
+            Testemunhos de Clientes
           </span>
           <h2 className="mt-4 font-heading font-extrabold text-3xl sm:text-4xl text-nexu-dark tracking-tight">
-            O que dizem os líderes que transformaram seus times
+            O que dizem os líderes que transformaram a gestão LT das suas empresas
           </h2>
         </div>
 
@@ -24,7 +24,7 @@ export function Testimonials() {
                 ))}
               </div>
               <p className="text-slate-700 text-sm leading-relaxed italic">
-                &ldquo;Antes do NexuHR, eu passava 4 dias inteiros no final de cada mês fechando cartões de ponto e respondendo dúvidas de férias. Hoje eu faço tudo em 40 minutos. Foi a melhor decisão para o nosso RH.&rdquo;
+                &ldquo;Antes do NexusLT, eu passava 4 dias inteiros no final de cada mês a validar registos de assiduidade e a responder a pedidos de férias. Hoje faço tudo em 40 minutos com relatórios prontos para a ACT. Foi a melhor decisão para a nossa gestão LT.&rdquo;
               </p>
             </div>
             <div className="mt-6 pt-6 border-t border-slate-100 flex items-center gap-3">
@@ -32,8 +32,8 @@ export function Testimonials() {
                 RC
               </div>
               <div>
-                <div className="font-bold text-sm text-nexu-dark">Roberta Cavalcanti</div>
-                <div className="text-xs text-nexu-muted">Head de Pessoas na Vortex Tech (85 colaboradores)</div>
+                <div className="font-bold text-sm text-nexu-dark">Rita Carvalho</div>
+                <div className="text-xs text-nexu-muted">Diretora de Gestão LT na Douro Tech (Porto • 85 colaboradores)</div>
               </div>
             </div>
           </div>
@@ -47,7 +47,7 @@ export function Testimonials() {
                 ))}
               </div>
               <p className="text-slate-700 text-sm leading-relaxed italic">
-                &ldquo;A adesão do time foi de 100% no primeiro dia. Os colaboradores adoram a praticidade para bater ponto e pedir folgas. E a assinatura digital de contratos nos poupou milhares de impressões.&rdquo;
+                &ldquo;A adesão da equipa foi de 100% no primeiro dia. Os colaboradores adoram a facilidade para picar o ponto no telemóvel e pedir férias. E a distribuição digital dos recibos de vencimento poupou-nos imenso tempo.&rdquo;
               </p>
             </div>
             <div className="mt-6 pt-6 border-t border-slate-100 flex items-center gap-3">
@@ -55,8 +55,8 @@ export function Testimonials() {
                 GF
               </div>
               <div>
-                <div className="font-bold text-sm text-nexu-dark">Gustavo Freitas</div>
-                <div className="text-xs text-nexu-muted">CEO na Nova Health (140 colaboradores)</div>
+                <div className="font-bold text-sm text-nexu-dark">Gonçalo Figueiredo</div>
+                <div className="text-xs text-nexu-muted">CEO na Porto Health (140 colaboradores)</div>
               </div>
             </div>
           </div>
@@ -70,7 +70,7 @@ export function Testimonials() {
                 ))}
               </div>
               <p className="text-slate-700 text-sm leading-relaxed italic">
-                &ldquo;O Nexu AI Copilot é impressionante. Ele me avisa proativamente sobre férias acumuladas e prepara resumos gerenciais perfeitos para as reuniões de diretoria.&rdquo;
+                &ldquo;O NexusLT AI Copilot é impressionante. Alerta proativamente sobre férias acumuladas e assegura o cumprimento do Código do Trabalho sem qualquer fricção.&rdquo;
               </p>
             </div>
             <div className="mt-6 pt-6 border-t border-slate-100 flex items-center gap-3">
@@ -78,8 +78,8 @@ export function Testimonials() {
                 ML
               </div>
               <div>
-                <div className="font-bold text-sm text-nexu-dark">Mariana Lacerda</div>
-                <div className="text-xs text-nexu-muted">Diretora de Operações na Lunar Logistics</div>
+                <div className="font-bold text-sm text-nexu-dark">Mafalda Lourenço</div>
+                <div className="text-xs text-nexu-muted">Diretora de Operações na Lusitânia Logistics (Matosinhos)</div>
               </div>
             </div>
           </div>

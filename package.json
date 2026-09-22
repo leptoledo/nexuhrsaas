@@ -1,8 +1,8 @@
 {
-  "name": "nexuhr-saas",
+  "name": "nexuslt-saas",
   "version": "1.0.0",
   "private": true,
-  "description": "NexuHR - The All-in-One People & HR Platform (Next.js + Supabase + Vercel)",
+  "description": "NexusLT - A Plataforma All-in-One de Gestão LT e Pessoas em Portugal (Next.js + Supabase + Vercel)",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

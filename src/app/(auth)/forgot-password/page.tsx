@@ -49,14 +49,17 @@ export default function ForgotPasswordPage() {
               <Layers className="w-6 h-6" />
             </div>
             <span className="font-heading font-extrabold text-2xl tracking-tight text-nexu-dark">
-              Nexu<span className="text-nexu-coral">HR</span>
+              Nexus<span className="text-nexu-coral">LT</span>
             </span>
           </Link>
-          <h2 className="mt-4 font-heading font-bold text-xl text-slate-900">
-            Recuperação de Senha
+          <div className="inline-block mt-2 px-2.5 py-0.5 rounded-full bg-slate-100 text-[11px] font-semibold text-slate-600">
+            Porto, Portugal 🇵🇹
+          </div>
+          <h2 className="mt-3 font-heading font-bold text-xl text-slate-900">
+            Recuperação de Palavra-passe
           </h2>
           <p className="text-xs text-slate-500 mt-1">
-            Informe seu e-mail para receber as instruções de redefinição.
+            Indique o seu e-mail para receber as instruções de redefinição.
           </p>
         </div>
 
@@ -73,20 +76,20 @@ export default function ForgotPasswordPage() {
               <CheckCircle2 className="w-6 h-6" />
             </div>
             <p className="text-xs text-slate-600">
-              Enviamos um link de redefinição para <strong>{email}</strong>. Verifique sua caixa de entrada e spam.
+              Enviámos uma ligação de redefinição para <strong>{email}</strong>. Verifique a sua caixa de entrada e pasta de spam.
             </p>
             <Link
               href="/login"
               className="inline-flex items-center gap-2 text-xs font-bold text-nexu-coral hover:underline pt-2"
             >
               <ArrowLeft className="w-4 h-4" />
-              <span>Voltar para o login</span>
+              <span>Voltar ao início de sessão</span>
             </Link>
           </div>
         ) : (
           <form onSubmit={handleReset} className="space-y-4 text-xs">
             <div>
-              <label className="block font-semibold text-slate-700 mb-1.5">E-mail Cadastrado</label>
+              <label className="block font-semibold text-slate-700 mb-1.5">E-mail Registado</label>
               <div className="relative">
                 <Mail className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
                 <input
@@ -94,7 +97,7 @@ export default function ForgotPasswordPage() {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="seu.nome@empresa.com"
+                  placeholder="o.seu.nome@empresa.pt"
                   className="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nexu-coral bg-slate-50 focus:bg-white text-xs"
                 />
               </div>
@@ -105,7 +108,7 @@ export default function ForgotPasswordPage() {
               disabled={loading}
               className="w-full py-3.5 bg-nexu-coral hover:bg-nexu-coralDark text-white font-bold rounded-xl text-xs transition-all shadow-md flex items-center justify-center gap-2 disabled:opacity-50"
             >
-              <span>{loading ? 'Enviando...' : 'Enviar Link de Redefinição'}</span>
+              <span>{loading ? 'A enviar...' : 'Enviar Ligação de Redefinição'}</span>
             </button>
 
             <div className="text-center pt-2">
@@ -114,7 +117,7 @@ export default function ForgotPasswordPage() {
                 className="inline-flex items-center gap-1.5 text-xs text-slate-500 hover:text-slate-800"
               >
                 <ArrowLeft className="w-3.5 h-3.5" />
-                <span>Voltar ao Login</span>
+                <span>Voltar ao Início de Sessão</span>
               </Link>
             </div>
           </form>

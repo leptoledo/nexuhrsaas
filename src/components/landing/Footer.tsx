@@ -13,12 +13,17 @@ export function Footer() {
               <div className="w-8 h-8 rounded-lg bg-nexu-coral flex items-center justify-center text-white font-bold">
                 <Layers className="w-5 h-5" />
               </div>
-              <span className="font-heading font-extrabold text-xl text-white">
-                Nexu<span className="text-nexu-coral">HR</span>
-              </span>
+              <div className="flex flex-col">
+                <span className="font-heading font-extrabold text-xl text-white">
+                  Nexus<span className="text-nexu-coral">LT</span>
+                </span>
+                <span className="text-[9px] font-bold uppercase tracking-widest text-slate-500 -mt-1">
+                  Porto • Portugal 🇵🇹
+                </span>
+              </div>
             </Link>
             <p className="text-slate-400 leading-relaxed max-w-sm">
-              A plataforma tudo-em-um de RH inteligente que conecta pessoas, automatiza o departamento pessoal e impulsiona o crescimento de equipes modernas.
+              A plataforma tudo-em-um de Gestão LT e Pessoas que conecta colaboradores, automatiza processos e assegura total conformidade com o Código do Trabalho em Portugal.
             </p>
             <div className="flex items-center gap-3 pt-2 text-slate-400">
               <a
@@ -54,31 +59,31 @@ export function Footer() {
 
           {/* Col 2: Módulos */}
           <div className="space-y-3">
-            <div className="font-bold text-white uppercase text-[11px] tracking-wider">Módulos</div>
+            <div className="font-bold text-white uppercase text-[11px] tracking-wider">Módulos LT</div>
             <ul className="space-y-2">
               <li>
                 <Link href="#modulos" className="hover:text-white transition-colors">
-                  Controle de Ponto
+                  Registo de Assiduidade
                 </Link>
               </li>
               <li>
                 <Link href="#modulos" className="hover:text-white transition-colors">
-                  Férias & Ausências
+                  Férias & Mapa Anual
                 </Link>
               </li>
               <li>
                 <Link href="#modulos" className="hover:text-white transition-colors">
-                  Recrutamento ATS
+                  Recrutamento (ATS)
                 </Link>
               </li>
               <li>
                 <Link href="#modulos" className="hover:text-white transition-colors">
-                  Assinatura Digital
+                  Recibos de Vencimento
                 </Link>
               </li>
               <li>
                 <Link href="#modulos" className="hover:text-white transition-colors">
-                  Nexu AI Copilot
+                  NexusLT AI Copilot
                 </Link>
               </li>
             </ul>
@@ -86,31 +91,31 @@ export function Footer() {
 
           {/* Col 3: Empresa */}
           <div className="space-y-3">
-            <div className="font-bold text-white uppercase text-[11px] tracking-wider">Empresa</div>
+            <div className="font-bold text-white uppercase text-[11px] tracking-wider">NexusLT Porto</div>
             <ul className="space-y-2">
               <li>
                 <Link href="#beneficios" className="hover:text-white transition-colors">
-                  Sobre Nós
+                  Sobre a Empresa
                 </Link>
               </li>
               <li>
                 <Link href="#depoimentos" className="hover:text-white transition-colors">
-                  Clientes & Cases
+                  Clientes em Portugal
                 </Link>
               </li>
               <li>
                 <Link href="#precos" className="hover:text-white transition-colors">
-                  Planos & Preços
+                  Planos em Euros (€)
                 </Link>
               </li>
               <li>
                 <Link href="/register" className="hover:text-white transition-colors">
-                  Criar Conta
+                  Criar Conta de Teste
                 </Link>
               </li>
               <li>
                 <Link href="/login" className="hover:text-white transition-colors">
-                  Login no Sistema
+                  Iniciar Sessão
                 </Link>
               </li>
             </ul>
@@ -118,31 +123,31 @@ export function Footer() {
 
           {/* Col 4: Conformidade */}
           <div className="space-y-3">
-            <div className="font-bold text-white uppercase text-[11px] tracking-wider">Conformidade</div>
+            <div className="font-bold text-white uppercase text-[11px] tracking-wider">Conformidade Legal</div>
             <ul className="space-y-2">
               <li>
-                <span className="text-slate-400">Privacidade & LGPD</span>
+                <span className="text-slate-400">Código do Trabalho (Lei 7/2009)</span>
               </li>
               <li>
-                <span className="text-slate-400">Termos de Serviço</span>
+                <span className="text-slate-400">Inspeções da ACT</span>
               </li>
               <li>
-                <span className="text-slate-400">Portaria 671 MTE</span>
+                <span className="text-slate-400">RGPD / Proteção de Dados</span>
               </li>
               <li>
-                <span className="text-slate-400">Segurança de Dados</span>
+                <span className="text-slate-400">Segurança Social & AT</span>
               </li>
               <li>
-                <span className="text-slate-400">Multi-tenant Supabase</span>
+                <span className="text-slate-400">Regulamento eIDAS (Assinaturas)</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="mt-12 pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-slate-500 gap-4">
-          <div>© {new Date().getFullYear()} NexuHR Inc. Todos os direitos reservados.</div>
+          <div>© {new Date().getFullYear()} NexusLT Lda. Sede no Porto, Portugal. Todos os direitos reservados.</div>
           <div className="flex items-center gap-4">
-            <span>Desenvolvido para escalar como SaaS corporativo moderno.</span>
+            <span>SaaS de Gestão LT desenvolvido em Portugal para o mercado europeu.</span>
           </div>
         </div>
       </div>

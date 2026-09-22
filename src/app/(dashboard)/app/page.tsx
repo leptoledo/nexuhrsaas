@@ -28,9 +28,12 @@ export default function DashboardPage() {
       {/* Welcome Banner */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-gradient-to-r from-slate-900 to-slate-800 p-6 rounded-3xl text-white shadow-lg">
         <div>
+          <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-800 text-[11px] font-semibold text-slate-300 mb-2 border border-slate-700">
+            <span>Porto, Portugal 🇵🇹</span>
+          </div>
           <h1 className="font-heading font-extrabold text-2xl">Olá, Mariana! 👋</h1>
           <p className="text-xs text-slate-300 mt-1">
-            Aqui está o resumo operacional do RH da <strong>Vortex Tech</strong> hoje, 20 de Setembro de 2026.
+            Aqui está o resumo operacional de Gestão LT da <strong>Vortex Tech Lda.</strong> hoje.
           </p>
         </div>
         <div className="flex items-center gap-2.5">
@@ -39,7 +42,7 @@ export default function DashboardPage() {
             className="px-4 py-2.5 rounded-xl bg-nexu-coral hover:bg-nexu-coralDark text-white text-xs font-bold transition-all shadow-md flex items-center gap-1.5"
           >
             <Clock className="w-3.5 h-3.5" />
-            <span>Espelho de Ponto</span>
+            <span>Extrato ACT (Assiduidade)</span>
           </Link>
           <Link
             href="/app/colaboradores"
@@ -69,7 +72,7 @@ export default function DashboardPage() {
           iconBgColor="bg-emerald-50"
           iconColor="text-emerald-600"
           trendText="87.5% assiduidade"
-          subtitle="hoje"
+          subtitle="hoje no Porto"
         />
         <MetricCard
           title="Férias & Ausências"
@@ -77,13 +80,13 @@ export default function DashboardPage() {
           icon={Palmtree}
           iconBgColor="bg-amber-50"
           iconColor="text-amber-600"
-          trendText="Ação necessária"
+          trendText="Ação requerida"
           trendPositive={false}
           subtitle="aprovação"
         />
         <MetricCard
-          title="Vagas Abertas"
-          value="3 Vagas"
+          title="Vagas em Aberto"
+          value="3 Ofertas"
           icon={Briefcase}
           iconBgColor="bg-rose-50"
           iconColor="text-nexu-coral"
@@ -99,9 +102,9 @@ export default function DashboardPage() {
           <div className="flex items-center justify-between mb-4">
             <div>
               <h3 className="font-heading font-bold text-base text-slate-900">
-                Assiduidade Semanal (%)
+                Assiduidade Semanal (%) — Conforme ACT
               </h3>
-              <p className="text-xs text-slate-500">Frequência média registrada nos últimos 7 dias</p>
+              <p className="text-xs text-slate-500">Frequência média registada nos últimos 7 dias úteis</p>
             </div>
             <span className="text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full flex items-center gap-1">
               <TrendingUp className="w-3.5 h-3.5" />
@@ -117,15 +120,15 @@ export default function DashboardPage() {
             <div className="flex items-center justify-between text-xs text-indigo-300 font-semibold mb-3">
               <span className="flex items-center gap-1.5">
                 <Bot className="w-4 h-4 text-nexu-coral" />
-                Nexu AI Insights
+                NexusLT AI Insights
               </span>
-              <span className="bg-indigo-500/30 text-indigo-200 text-[10px] px-2 py-0.5 rounded">
+              <span className="bg-indigo-500/30 text-indigo-200 text-[10px] px-2 py-0.5 rounded font-mono">
                 ATIVO
               </span>
             </div>
-            <h4 className="font-heading font-bold text-lg text-white">Análise Preditiva de DP</h4>
+            <h4 className="font-heading font-bold text-lg text-white">Análise de Gestão LT</h4>
             <p className="mt-2 text-xs text-slate-300 leading-relaxed">
-              &ldquo;Detectei que <strong>Mariana Santos</strong> acumula 22 dias de férias com prazo limite próximo em Novembro. Recomendo alinhar agendamento.&rdquo;
+              &ldquo;Identifiquei que <strong>Mariana Santos</strong> acumula 22 dias úteis de férias com prazo para agendamento do mapa anual (Art.º 241.º do Código do Trabalho). Deseja emitir lembrete?&rdquo;
             </p>
           </div>
 
@@ -145,9 +148,9 @@ export default function DashboardPage() {
       <div className="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm">
         <div className="flex items-center justify-between mb-4">
           <h3 className="font-heading font-bold text-base text-slate-900">
-            Atividades e Batidas de Ponto Recentes
+            Atividades e Picagens de Ponto Recentes
           </h3>
-          <span className="text-xs text-slate-400">Atualizado em tempo real</span>
+          <span className="text-xs text-slate-400">Atualizado em tempo real • Porto</span>
         </div>
 
         <div className="overflow-x-auto">
@@ -158,40 +161,40 @@ export default function DashboardPage() {
                 <th className="py-3 px-4">Ação / Evento</th>
                 <th className="py-3 px-4">Horário / Data</th>
                 <th className="py-3 px-4">Método</th>
-                <th className="py-3 px-4">Status</th>
+                <th className="py-3 px-4">Estado</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100">
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-semibold text-slate-800">Lucas Gomes</td>
-                <td className="py-3 px-4 text-slate-600">Registro de Ponto (Entrada)</td>
+                <td className="py-3 px-4 text-slate-600">Picagem de Ponto (Entrada)</td>
                 <td className="py-3 px-4 text-slate-500">08:58</td>
-                <td className="py-3 px-4 text-slate-500">App Mobile (GPS)</td>
+                <td className="py-3 px-4 text-slate-500">App Móvel (GPS Porto)</td>
                 <td className="py-3 px-4">
                   <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800">
-                    Confirmado
+                    Validado ACT
                   </span>
                 </td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-semibold text-slate-800">Mariana Santos</td>
-                <td className="py-3 px-4 text-slate-600">Solicitação de Férias (10 dias)</td>
+                <td className="py-3 px-4 text-slate-600">Pedido de Férias (9 dias úteis)</td>
                 <td className="py-3 px-4 text-slate-500">09:15</td>
                 <td className="py-3 px-4 text-slate-500">Portal Web</td>
                 <td className="py-3 px-4">
                   <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800">
-                    Pendente RH
+                    Pendente LT
                   </span>
                 </td>
               </tr>
               <tr className="hover:bg-slate-50 transition-colors">
                 <td className="py-3 px-4 font-semibold text-slate-800">Ana Ferreira</td>
-                <td className="py-3 px-4 text-slate-600">Registro de Ponto (Entrada)</td>
+                <td className="py-3 px-4 text-slate-600">Picagem de Ponto (Entrada)</td>
                 <td className="py-3 px-4 text-slate-500">09:02</td>
                 <td className="py-3 px-4 text-slate-500">Reconhecimento Facial</td>
                 <td className="py-3 px-4">
                   <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800">
-                    Confirmado
+                    Validado ACT
                   </span>
                 </td>
               </tr>

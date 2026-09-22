@@ -33,7 +33,7 @@ export default function LoginPage() {
           router.push('/app');
           return;
         }
-        setError(authError.message || 'Erro ao efetuar login. Verifique suas credenciais.');
+        setError(authError.message || 'Erro ao iniciar sessão. Verifique as suas credenciais.');
       } else {
         router.push('/app');
       }
@@ -59,14 +59,17 @@ export default function LoginPage() {
               <Layers className="w-6 h-6" />
             </div>
             <span className="font-heading font-extrabold text-2xl tracking-tight text-nexu-dark">
-              Nexu<span className="text-nexu-coral">HR</span>
+              Nexus<span className="text-nexu-coral">LT</span>
             </span>
           </Link>
-          <h2 className="mt-4 font-heading font-bold text-xl text-slate-900">
-            Acesse o Painel da sua Empresa
+          <div className="inline-block mt-2 px-2.5 py-0.5 rounded-full bg-slate-100 text-[11px] font-semibold text-slate-600">
+            Porto, Portugal 🇵🇹
+          </div>
+          <h2 className="mt-3 font-heading font-bold text-xl text-slate-900">
+            Aceda ao Painel da sua Empresa
           </h2>
           <p className="text-xs text-slate-500 mt-1">
-            Entre com suas credenciais ou use o acesso de demonstração.
+            Inicie sessão com as suas credenciais ou utilize o acesso de demonstração.
           </p>
         </div>
 
@@ -87,7 +90,7 @@ export default function LoginPage() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="seu.nome@empresa.com"
+                placeholder="o.seu.nome@empresa.pt"
                 className="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nexu-coral bg-slate-50 focus:bg-white text-xs"
               />
             </div>
@@ -95,9 +98,9 @@ export default function LoginPage() {
 
           <div>
             <div className="flex items-center justify-between mb-1.5">
-              <label className="block font-semibold text-slate-700">Senha</label>
+              <label className="block font-semibold text-slate-700">Palavra-passe</label>
               <Link href="/forgot-password" className="text-nexu-coral hover:underline font-medium">
-                Esqueceu a senha?
+                Esqueceu-se da palavra-passe?
               </Link>
             </div>
             <div className="relative">
@@ -118,7 +121,7 @@ export default function LoginPage() {
             disabled={loading}
             className="w-full py-3.5 bg-nexu-coral hover:bg-nexu-coralDark text-white font-bold rounded-xl text-xs transition-all shadow-md flex items-center justify-center gap-2 disabled:opacity-50"
           >
-            <span>{loading ? 'Autenticando...' : 'Entrar no NexuHR'}</span>
+            <span>{loading ? 'A autenticar...' : 'Iniciar Sessão no NexusLT'}</span>
             <ArrowRight className="w-4 h-4" />
           </button>
         </form>
@@ -130,14 +133,14 @@ export default function LoginPage() {
             onClick={handleDemoLogin}
             className="w-full py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold rounded-xl text-xs transition-colors flex items-center justify-center gap-2"
           >
-            <span>Acessar Modo Demonstração (Admin)</span>
+            <span>Aceder em Modo de Demonstração (Admin)</span>
           </button>
         </div>
 
         <div className="mt-6 text-center text-xs text-slate-500">
           Ainda não tem conta?{' '}
           <Link href="/register" className="text-nexu-coral font-bold hover:underline">
-            Criar conta de teste grátis
+            Criar conta de teste gratuita
           </Link>
         </div>
       </div>

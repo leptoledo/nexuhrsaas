@@ -8,7 +8,7 @@ export function Header({ onQuickPunch }: { onQuickPunch?: () => void }) {
 
   useEffect(() => {
     const updateTime = () => {
-      setTimeStr(new Date().toLocaleTimeString('pt-BR'));
+      setTimeStr(new Date().toLocaleTimeString('pt-PT'));
     };
     updateTime();
     const interval = setInterval(updateTime, 1000);
@@ -23,7 +23,7 @@ export function Header({ onQuickPunch }: { onQuickPunch?: () => void }) {
           <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
           <input
             type="text"
-            placeholder="Buscar colaboradores, relatórios, vagas..."
+            placeholder="Pesquisar colaboradores, relatórios ACT, vagas..."
             className="w-full pl-9 pr-4 py-2 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-nexu-coral bg-slate-50 focus:bg-white transition-colors"
           />
         </div>
@@ -38,7 +38,7 @@ export function Header({ onQuickPunch }: { onQuickPunch?: () => void }) {
             onClick={onQuickPunch}
             className="ml-2 bg-nexu-coral hover:bg-nexu-coralDark text-white px-2.5 py-1 rounded-lg font-bold text-[11px] transition-colors shadow-sm"
           >
-            Bater Ponto
+            Picar Ponto
           </button>
         </div>
 

@@ -37,7 +37,7 @@ export function VacationManager({
       employee_role: emp?.role_title || '',
       start_date: startDate,
       end_date: endDate,
-      days_count: 10,
+      days_count: 9,
       vacation_type: vacType,
       status: 'pending',
       reason,
@@ -51,10 +51,10 @@ export function VacationManager({
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
           <h2 className="font-heading font-extrabold text-2xl text-slate-900">
-            Gestão de Férias & Ausências
+            Gestão de Férias & Ausências (22 Dias Úteis)
           </h2>
           <p className="text-xs text-slate-500 mt-1">
-            Aprovações rápidas para gestores, saldos automatizados e calendário para evitar sobreposição de ausências.
+            Aprovações rápidas, saldos legais em conformidade com o Código do Trabalho e mapa anual de férias da equipa.
           </p>
         </div>
         <button
@@ -62,7 +62,7 @@ export function VacationManager({
           className="px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-xs font-bold transition-all shadow-md flex items-center gap-2"
         >
           <Plus className="w-4 h-4" />
-          <span>Nova Solicitação</span>
+          <span>Novo Pedido de Férias</span>
         </button>
       </div>
 
@@ -70,13 +70,13 @@ export function VacationManager({
       <div className="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm">
         <h3 className="font-heading font-bold text-base text-slate-900 mb-4 flex items-center gap-2">
           <Palmtree className="w-4 h-4 text-amber-500" />
-          <span>Solicitações Aguardando Aprovação do Gestor</span>
+          <span>Pedidos a Aguardar Aprovação da Gestão LT</span>
         </h3>
 
         {pendingList.length === 0 ? (
           <div className="p-8 text-center text-slate-400 text-xs">
             <Check className="w-8 h-8 mx-auto text-emerald-500 mb-2" />
-            Todas as solicitações de férias foram respondidas! Nenhuma pendência na fila.
+            Todos os pedidos de férias foram processados! Nenhuma pendência na fila.
           </div>
         ) : (
           <div className="space-y-3">
@@ -101,7 +101,7 @@ export function VacationManager({
                       </span>
                     </div>
                     <div className="text-xs text-slate-600 mt-0.5">
-                      <strong>Período:</strong> {v.start_date} até {v.end_date} ({v.days_count} dias) •{' '}
+                      <strong>Período:</strong> {v.start_date} até {v.end_date} ({v.days_count} dias úteis) •{' '}
                       <span className="text-amber-700 font-semibold">{v.vacation_type}</span>
                     </div>
                   </div>
@@ -140,10 +140,10 @@ export function VacationManager({
             </button>
 
             <h3 className="font-heading font-bold text-xl text-slate-900 mb-1">
-              Solicitar Férias ou Ausência
+              Submeter Pedido de Férias ou Ausência
             </h3>
             <p className="text-xs text-slate-500 mb-6">
-              Envie o pedido para validação imediata do seu gestor.
+              Envie o pedido para validação imediata da direção da empresa.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-4 text-xs">
@@ -156,7 +156,7 @@ export function VacationManager({
                 >
                   {employees.map((e) => (
                     <option key={e.id} value={e.id}>
-                      {e.full_name} ({e.role_title}) - Saldo: {e.vacation_balance_days} dias
+                      {e.full_name} ({e.role_title}) - Saldo: {e.vacation_balance_days} dias úteis
                     </option>
                   ))}
                 </select>
@@ -192,10 +192,10 @@ export function VacationManager({
                   onChange={(e) => setVacType(e.target.value as VacationType)}
                   className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-amber-500 bg-white"
                 >
-                  <option value="regular_vacation">Férias Regulares</option>
-                  <option value="day_off">Folga / Day-off</option>
-                  <option value="sick_leave">Atestado Médico</option>
-                  <option value="family_leave">Licença Familiar</option>
+                  <option value="regular_vacation">Férias Regulares (Anuais)</option>
+                  <option value="day_off">Compensação de Horas / Folga</option>
+                  <option value="sick_leave">Baixa Médica (SNS / Seg. Social)</option>
+                  <option value="family_leave">Licença Parental / Familiar</option>
                 </select>
               </div>
 
@@ -203,7 +203,7 @@ export function VacationManager({
                 type="submit"
                 className="w-full py-3.5 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-xl text-xs transition-all shadow-md mt-4"
               >
-                Enviar Solicitação
+                Submeter Pedido
               </button>
             </form>
           </div>

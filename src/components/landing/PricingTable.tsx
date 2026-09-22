@@ -5,20 +5,20 @@ import Link from 'next/link';
 import { Check } from 'lucide-react';
 
 export function PricingTable() {
-  const [billing, setBilling] = useState<'monthly' | 'annual'>('monthly');
+  const [billing, setBilling] = useState<'monthly' | 'annual'>('annual');
 
   return (
     <section id="precos" className="py-20 md:py-28 bg-white border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto">
           <span className="text-xs font-bold uppercase tracking-widest text-nexu-coral bg-nexu-coralLight px-3 py-1 rounded-full">
-            Planos Transparentes
+            Planos Transparentes em Euros (€)
           </span>
           <h2 className="mt-4 font-heading font-extrabold text-3xl sm:text-4xl text-nexu-dark tracking-tight">
-            Investimento previsível que cresce com a sua empresa
+            Investimento previsível que cresce com a sua empresa em Portugal
           </h2>
           <p className="mt-3 text-nexu-muted text-base sm:text-lg">
-            Todos os planos incluem 14 dias de teste grátis com acesso completo a todos os módulos.
+            Todos os planos incluem 14 dias de teste gratuito com acesso integral a todos os módulos e suporte local no Porto.
           </p>
 
           {/* Billing Toggle */}
@@ -31,7 +31,7 @@ export function PricingTable() {
                   : 'text-nexu-muted hover:text-nexu-dark'
               }`}
             >
-              Mensal
+              Faturação Mensal
             </button>
             <button
               onClick={() => setBilling('annual')}
@@ -41,9 +41,9 @@ export function PricingTable() {
                   : 'text-nexu-muted hover:text-nexu-dark'
               }`}
             >
-              <span>Anual</span>
+              <span>Faturação Anual</span>
               <span className="bg-emerald-100 text-emerald-800 text-[10px] px-2 py-0.5 rounded-full font-extrabold">
-                20% OFF
+                20% Poupança
               </span>
             </button>
           </div>
@@ -54,13 +54,13 @@ export function PricingTable() {
           {/* Plan 1: Starter */}
           <div className="bg-white border border-slate-200 rounded-3xl p-8 flex flex-col justify-between hover:border-slate-300 transition-all">
             <div>
-              <div className="text-xs font-bold uppercase tracking-wider text-slate-400">Para Equipes em Início</div>
+              <div className="text-xs font-bold uppercase tracking-wider text-slate-400">Para Equipas Pequenas</div>
               <h3 className="mt-2 text-2xl font-bold font-heading text-nexu-dark">Starter</h3>
-              <p className="mt-2 text-xs text-nexu-muted">Ideal para empresas de até 20 colaboradores que buscam sair do Excel.</p>
+              <p className="mt-2 text-xs text-nexu-muted">Ideal para empresas até 20 colaboradores que pretendem abandonar as folhas de cálculo.</p>
 
               <div className="mt-6 flex items-baseline gap-1">
                 <span className="text-3xl font-extrabold font-heading text-nexu-dark">
-                  {billing === 'annual' ? 'R$ 11' : 'R$ 14'}
+                  {billing === 'annual' ? '4 €' : '5 €'}
                 </span>
                 <span className="text-xs text-slate-500">/colaborador /mês</span>
               </div>
@@ -68,19 +68,19 @@ export function PricingTable() {
               <ul className="mt-8 space-y-3.5 text-xs text-slate-700">
                 <li className="flex items-center gap-2.5">
                   <Check className="w-4 h-4 text-emerald-500" />
-                  <span>Ponto digital via Web & Mobile (GPS)</span>
+                  <span>Picagem de ponto com geovalidação (Conforme ACT)</span>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Check className="w-4 h-4 text-emerald-500" />
-                  <span>Gestão de férias e ausências</span>
+                  <span>Gestão de férias e mapa anual obrigatório</span>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Check className="w-4 h-4 text-emerald-500" />
-                  <span>Diretório de colaboradores e organograma</span>
+                  <span>Diretório da equipa, NIF e organograma</span>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Check className="w-4 h-4 text-emerald-500" />
-                  <span>Portal do Colaborador (Autosserviço)</span>
+                  <span>Portal do Colaborador (Mobile & Desktop)</span>
                 </li>
               </ul>
             </div>
@@ -90,7 +90,7 @@ export function PricingTable() {
                 href="/register?plan=starter"
                 className="block text-center w-full py-3 rounded-xl border border-slate-300 hover:bg-slate-50 font-semibold text-xs text-nexu-dark transition-colors"
               >
-                Começar Teste Grátis
+                Iniciar Teste Gratuito
               </Link>
             </div>
           </div>
@@ -98,17 +98,17 @@ export function PricingTable() {
           {/* Plan 2: Growth (Featured) */}
           <div className="bg-gradient-to-b from-white to-rose-50/40 border-2 border-nexu-coral rounded-3xl p-8 flex flex-col justify-between shadow-xl relative scale-105 z-10">
             <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-nexu-coral text-white text-[11px] font-extrabold uppercase tracking-wider px-4 py-1 rounded-full shadow-md">
-              Mais Popular
+              Mais Escolhido
             </div>
 
             <div>
-              <div className="text-xs font-bold uppercase tracking-wider text-nexu-coral">Para Empresas em Crescimento</div>
-              <h3 className="mt-2 text-2xl font-bold font-heading text-nexu-dark">Growth & Pro</h3>
-              <p className="mt-2 text-xs text-nexu-muted">Para times de 20 a 150 colaboradores que querem automação completa e IA.</p>
+              <div className="text-xs font-bold uppercase tracking-wider text-nexu-coral">Para PMEs em Expansão</div>
+              <h3 className="mt-2 text-2xl font-bold font-heading text-nexu-dark">Profissional (Pro)</h3>
+              <p className="mt-2 text-xs text-nexu-muted">Para empresas de 20 a 100 colaboradores que procuram automação completa de LT e IA.</p>
 
               <div className="mt-6 flex items-baseline gap-1">
                 <span className="text-3xl font-extrabold font-heading text-nexu-dark">
-                  {billing === 'annual' ? 'R$ 19' : 'R$ 24'}
+                  {billing === 'annual' ? '7 €' : '8 €'}
                 </span>
                 <span className="text-xs text-slate-500">/colaborador /mês</span>
               </div>
@@ -116,7 +116,7 @@ export function PricingTable() {
               <ul className="mt-8 space-y-3.5 text-xs text-slate-700">
                 <li className="flex items-center gap-2.5 font-semibold text-nexu-dark">
                   <Check className="w-4 h-4 text-nexu-coral" />
-                  <span>Tudo do plano Starter, mais:</span>
+                  <span>Tudo o incluído no plano Starter, e ainda:</span>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Check className="w-4 h-4 text-emerald-500" />
@@ -124,25 +124,25 @@ export function PricingTable() {
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Check className="w-4 h-4 text-emerald-500" />
-                  <span>Assinatura digital ilimitada de documentos</span>
+                  <span>Distribuição segura de recibos de vencimento</span>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Check className="w-4 h-4 text-emerald-500" />
-                  <span><strong>Nexu AI Copilot</strong> integrado</span>
+                  <span><strong>NexusLT AI Copilot</strong> integrado</span>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Check className="w-4 h-4 text-emerald-500" />
-                  <span>Suporte prioritário via WhatsApp & Chat</span>
+                  <span>Relatórios de assiduidade prontos para auditorias da ACT</span>
                 </li>
               </ul>
             </div>
 
             <div className="mt-8">
               <Link
-                href="/register?plan=growth"
+                href="/register?plan=pro"
                 className="block text-center w-full py-3.5 rounded-xl bg-nexu-coral hover:bg-nexu-coralDark text-white font-semibold text-xs transition-all shadow-lg hover:shadow-nexu-coral/30"
               >
-                Experimentar Plano Growth Grátis
+                Experimentar Plano Pro Grátis
               </Link>
             </div>
           </div>
@@ -150,30 +150,33 @@ export function PricingTable() {
           {/* Plan 3: Enterprise */}
           <div className="bg-white border border-slate-200 rounded-3xl p-8 flex flex-col justify-between hover:border-slate-300 transition-all">
             <div>
-              <div className="text-xs font-bold uppercase tracking-wider text-slate-400">Grandes Operações</div>
-              <h3 className="mt-2 text-2xl font-bold font-heading text-nexu-dark">Enterprise</h3>
-              <p className="mt-2 text-xs text-nexu-muted">Para operações com mais de 150 colaboradores com requisitos customizados.</p>
+              <div className="text-xs font-bold uppercase tracking-wider text-slate-400">Grandes Organizações</div>
+              <h3 className="mt-2 text-2xl font-bold font-heading text-nexu-dark">Empresarial</h3>
+              <p className="mt-2 text-xs text-nexu-muted">Para operações com mais de 100 colaboradores com múltiplos NIFs e requisitos personalizados.</p>
 
               <div className="mt-6 flex items-baseline gap-1">
-                <span className="text-3xl font-extrabold font-heading text-nexu-dark">Personalizado</span>
+                <span className="text-3xl font-extrabold font-heading text-nexu-dark">
+                  {billing === 'annual' ? '11 €' : '13 €'}
+                </span>
+                <span className="text-xs text-slate-500">/colaborador /mês</span>
               </div>
 
               <ul className="mt-8 space-y-3.5 text-xs text-slate-700">
                 <li className="flex items-center gap-2.5">
                   <Check className="w-4 h-4 text-emerald-500" />
-                  <span>Todas as funcionalidades sem limites</span>
+                  <span>Todas as funcionalidades sem qualquer limite</span>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Check className="w-4 h-4 text-emerald-500" />
-                  <span>Gerente de Sucesso de Conta dedicado (CSM)</span>
+                  <span>Gestor de Sucesso de Conta dedicado (Porto)</span>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Check className="w-4 h-4 text-emerald-500" />
-                  <span>Integrações via API customizada & SSO / SAML</span>
+                  <span>Integrações com software de faturação e ERPs</span>
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Check className="w-4 h-4 text-emerald-500" />
-                  <span>SLA de atendimento de 99.9% garantido</span>
+                  <span>SLA contratual e conformidade RGPD reforçada</span>
                 </li>
               </ul>
             </div>
@@ -183,7 +186,7 @@ export function PricingTable() {
                 href="/register?plan=enterprise"
                 className="block text-center w-full py-3 rounded-xl border border-slate-300 hover:bg-slate-50 font-semibold text-xs text-nexu-dark transition-colors"
               >
-                Falar com Consultor Enterprise
+                Falar com a Nossa Equipa no Porto
               </Link>
             </div>
           </div>

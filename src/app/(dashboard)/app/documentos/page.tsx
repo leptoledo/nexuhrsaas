@@ -16,11 +16,11 @@ export default function DocumentosPage() {
   };
 
   const handleRequestSignature = () => {
-    showToast('📄 Nova solicitação de assinatura eletrônica enviada por e-mail!');
+    showToast('📄 Novo pedido de assinatura digital enviado por e-mail!');
   };
 
   const handleDownload = (doc: DocumentItem) => {
-    showToast(`Baixando "${doc.title}" com carimbo criptográfico...`);
+    showToast(`A descarregar "${doc.title}" com carimbo temporal criptográfico...`);
   };
 
   return (

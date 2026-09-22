@@ -20,14 +20,14 @@ export default function FeriasPage() {
     setVacations(
       vacations.map((v) => (v.id === id ? { ...v, status: 'approved' } : v))
     );
-    showToast('✅ Férias aprovadas com sucesso!');
+    showToast('✅ Férias aprovadas e registadas no Mapa Anual!');
   };
 
   const handleReject = (id: string) => {
     setVacations(
       vacations.map((v) => (v.id === id ? { ...v, status: 'rejected' } : v))
     );
-    showToast('Solicitação de férias recusada.');
+    showToast('Pedido de férias recusado.');
   };
 
   const handleCreate = (req: Partial<VacationRequest>) => {
@@ -39,13 +39,13 @@ export default function FeriasPage() {
       employee_role: req.employee_role || '',
       start_date: req.start_date || '2026-10-01',
       end_date: req.end_date || '2026-10-10',
-      days_count: req.days_count || 10,
+      days_count: req.days_count || 9,
       vacation_type: req.vacation_type || 'regular_vacation',
       status: 'pending',
       reason: req.reason || '',
     };
     setVacations([newVac, ...vacations]);
-    showToast('Solicitação de férias enviada ao gestor!');
+    showToast('Pedido de férias enviado à direção!');
   };
 
   return (

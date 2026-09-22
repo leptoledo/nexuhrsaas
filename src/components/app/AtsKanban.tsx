@@ -18,9 +18,9 @@ export function AtsKanban({
   onNewCandidate,
 }: AtsKanbanProps) {
   const stages: { id: CandidateStage; label: string; bg: string }[] = [
-    { id: 'triagem', label: '1. Triagem', bg: 'bg-slate-100' },
+    { id: 'triagem', label: '1. Triagem Inicial', bg: 'bg-slate-100' },
     { id: 'entrevista', label: '2. Entrevistas', bg: 'bg-slate-100' },
-    { id: 'proposta', label: '3. Proposta Feita', bg: 'bg-slate-100' },
+    { id: 'proposta', label: '3. Proposta Apresentada', bg: 'bg-slate-100' },
     { id: 'contratado', label: '4. Contratado 🎉', bg: 'bg-emerald-50/80' },
   ];
 
@@ -32,7 +32,7 @@ export function AtsKanban({
             Recrutamento & Seleção (ATS Kanban)
           </h2>
           <p className="text-xs text-slate-500 mt-1">
-            Pipeline ágil com triagem assistida por IA e contratação/admissão com 1 clique.
+            Pipeline ágil com triagem assistida por IA e admissão imediata em conformidade com o Código do Trabalho.
           </p>
         </div>
         <button
@@ -40,7 +40,7 @@ export function AtsKanban({
           className="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all shadow-md flex items-center gap-2"
         >
           <Plus className="w-4 h-4" />
-          <span>Cadastrar Candidato</span>
+          <span>Registar Candidato</span>
         </button>
       </div>
 
@@ -67,7 +67,7 @@ export function AtsKanban({
                     <div className="flex items-center justify-between">
                       <span className="font-bold text-slate-800">{cand.full_name}</span>
                       <span className="text-[10px] bg-emerald-50 text-emerald-700 font-bold px-1.5 py-0.5 rounded border border-emerald-200">
-                        {cand.fit_score}% Fit
+                        {cand.fit_score}% Perfil
                       </span>
                     </div>
                     <div className="text-slate-500 text-[11px] mt-1">{cand.role_applied}</div>
@@ -89,7 +89,7 @@ export function AtsKanban({
                           onClick={() => onAdvance(cand.id)}
                           className="text-nexu-indigo hover:text-indigo-800 font-bold flex items-center gap-1 transition-colors"
                         >
-                          <span>Avançar Etapa</span>
+                          <span>Avançar Fase</span>
                           <ChevronRight className="w-3.5 h-3.5" />
                         </button>
                       ) : (
@@ -98,7 +98,7 @@ export function AtsKanban({
                           className="text-emerald-700 hover:text-emerald-900 font-bold flex items-center gap-1 transition-colors"
                         >
                           <UserCheck className="w-3.5 h-3.5" />
-                          <span>Efetivar Admissão</span>
+                          <span>Concluir Admissão</span>
                         </button>
                       )}
                     </div>

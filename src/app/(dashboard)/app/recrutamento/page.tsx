@@ -26,7 +26,7 @@ export default function RecrutamentoPage() {
         return c;
       })
     );
-    showToast('🎯 Candidato avançou de etapa no pipeline!');
+    showToast('🎯 Candidato avançou de fase no pipeline!');
   };
 
   const handleOnboard = (candidate: Candidate) => {
@@ -37,18 +37,18 @@ export default function RecrutamentoPage() {
   const handleNewCandidate = () => {
     const name = prompt('Nome do Candidato:');
     if (!name) return;
-    const role = prompt('Cargo pretendido:');
+    const role = prompt('Função pretendida:');
     if (!role) return;
 
     const newCand: Candidate = {
       id: `cand-${Date.now()}`,
       organization_id: 'org-vortex',
       full_name: name,
-      email: `${name.toLowerCase().replace(' ', '.')}@email.com`,
+      email: `${name.toLowerCase().replace(' ', '.')}@email.pt`,
       role_applied: role,
       stage: 'triagem',
-      fit_score: 90,
-      tags: ['Novo', 'Triagem IA'],
+      fit_score: 92,
+      tags: ['Novo', 'Triagem IA', 'Porto'],
     };
 
     setCandidates([newCand, ...candidates]);

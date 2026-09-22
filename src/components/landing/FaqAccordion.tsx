@@ -12,22 +12,27 @@ const FAQ_DATA: FaqItem[] = [
   {
     question: 'Como funciona o período de teste gratuito de 14 dias?',
     answer:
-      'Você tem acesso imediato e irrestrito a todos os módulos da plataforma durante 14 dias. Não solicitamos cartão de crédito no cadastro. Após o período, você pode escolher o plano ideal para continuar.',
+      'Terá acesso imediato e irrestrito a todos os módulos da plataforma durante 14 dias. Não solicitamos cartão de crédito no registo. Findo o período, poderá escolher o plano ideal para continuar.',
   },
   {
-    question: 'O ponto eletrônico está de acordo com as leis do trabalho e Portaria 671 MTE?',
+    question: 'O registo de assiduidade cumpre as exigências da ACT e do Código do Trabalho?',
     answer:
-      'Sim! O NexuHR cumpre rigorosamente as exigências da Portaria 671 do Ministério do Trabalho e Emprego (REP-P e REP-A), emitindo comprovantes assinados digitalmente com validade jurídica comprovada.',
+      'Sim, sem exceções! O NexusLT cumpre rigorosamente as exigências do Artigo 202.º do Código do Trabalho (Lei n.º 7/2009), permitindo o registo diário de entradas, intervalos e saídas, com relatórios fiscais prontos para qualquer inspeção da ACT.',
   },
   {
-    question: 'Como é feita a migração dos dados das nossas planilhas antigas?',
+    question: 'Como funciona a gestão do Mapa Anual de Férias?',
     answer:
-      'Oferecemos um importador automático via planilha Excel / CSV. Em menos de 10 minutos, toda a base de colaboradores, cargos e departamentos é importada para o banco de dados sem perda de histórico.',
+      'O sistema controla automaticamente o saldo legal mínimo de 22 dias úteis de férias por colaborador e compila o Mapa de Férias da organização em formato homologado, facilitando o cumprimento da afixação obrigatória até 15 de abril.',
   },
   {
-    question: 'Como a IA (Nexu AI Copilot) protege os dados confidenciais dos funcionários?',
+    question: 'Onde está sediada a NexusLT e como é feito o suporte?',
     answer:
-      'Nossos modelos de IA são isolados e não utilizam os dados privados da sua organização para treinamento de terceiros. Operamos com criptografia de ponta a ponta e isolamento estrito via RLS (Row Level Security) no Supabase.',
+      'A NexusLT está sediada na cidade do Porto, Portugal. A nossa equipa de apoio ao cliente e consultoria LT opera a partir de Portugal, garantindo suporte ágil, no mesmo fuso horário e com profundo conhecimento da legislação laboral nacional.',
+  },
+  {
+    question: 'Como a IA (NexusLT AI Copilot) protege os dados dos colaboradores?',
+    answer:
+      'A segurança e a privacidade estão no centro da nossa arquitetura. Operamos em estrita conformidade com o RGPD (Regulamento Geral sobre a Proteção de Dados), com servidores europeus, encriptação de ponta a ponta e sem partilha de dados confidenciais com terceiros.',
   },
 ];
 
@@ -43,10 +48,10 @@ export function FaqAccordion() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <span className="text-xs font-bold uppercase tracking-widest text-nexu-coral bg-nexu-coralLight px-3 py-1 rounded-full">
-            Dúvidas Comuns
+            Dúvidas Frequentes
           </span>
           <h2 className="mt-4 font-heading font-extrabold text-3xl sm:text-4xl text-nexu-dark tracking-tight">
-            Perguntas Frequentes sobre o NexuHR
+            Perguntas Frequentes sobre o NexusLT
           </h2>
         </div>
 

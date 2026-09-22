@@ -20,7 +20,8 @@ export interface Organization {
   id: string;
   name: string;
   slug: string;
-  cnpj: string | null;
+  cnpj?: string | null;
+  nipc?: string | null;
   plan: SubscriptionTier;
   status: SubscriptionStatus;
   trial_ends_at: string;
@@ -47,10 +48,12 @@ export interface Employee {
   full_name: string;
   email: string;
   phone?: string | null;
+  nif?: string | null;
+  niss?: string | null;
   role_title: string;
   department: string;
   admission_date: string;
-  salary: number;
+  salary: number; // Em Euros (€)
   vacation_balance_days: number;
   status: EmployeeStatus;
   avatar_color: string;
